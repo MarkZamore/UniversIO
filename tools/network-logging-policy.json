@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "kind": "pack-owned-bounded-network-logging",
+  "minecraftVersion": "1.19.2",
+  "config": {
+    "path": "config/log4j2.xml",
+    "sizeBytes": 1726,
+    "sha256": "a16e625c201b1c483e4dc50088921c5658e7420671c4d1c06a8433ebe049cd34"
+  },
+  "jvmSelector": "-Dlog4j.configurationFile=config/log4j2.xml",
+  "ownership": "config/log4j2.xml",
+  "logger": "net.minecraft.network.Connection",
+  "debugMessages": [
+    "Failed to sent packet",
+    "Double fault",
+    "Skipping packet due to errors",
+    "Timeout"
+  ],
+  "referenceConfigSha256": "a16e625c201b1c483e4dc50088921c5658e7420671c4d1c06a8433ebe049cd34"
+}
