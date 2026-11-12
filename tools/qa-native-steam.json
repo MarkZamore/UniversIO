@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "sourceRevision": "0773ff105caafdb6e6788911f5f42a893efb3098",
+  "minecraftVersion": "1.19.2",
+  "forgeVersion": "43.2.10",
+  "javaMajorVersion": 17,
+  "authorClientFileId": 5035806,
+  "authorClientSha256": "77a4a794d90096a4947de073466dcf6e0c3a09fd6b939634bbc5633540cde87f",
+  "upstreamLockSha256": "d6f800945aa12be434f1404cb20bfbff242c9bb608506174a2c85553b75ade57",
+  "launcherAssemblySha256": "a9d2e0538436913c5625cc6ea37e992dc8e049ae36f2fabafb173a00dacad3f9",
+  "descriptorSha256": "8f839318b54a872e7e0cc0dd0c7d735c9cba9c58bfe30c4c75d7b16261279786",
+  "e4steamSha256": "3f397fc193f14d3c543b5ef9b4613bc149a21ca8e14bd93c39de3d1bc6f9553c",
+  "testAgentSha256": "a5f186c8ae4991bcbd8de7071898065999ffeb5ae25330a52724eb25210faa34",
+  "testAgentSourceSha256": "c8d13ad2ac83508c9e48f6ff4568f5294fc5d6c8da1793d3e545a2a2aaa33b2f",
+  "qaRunnerSourceSha256": "938e398b6df89c6991fe84cf721016cac8646092d9f049e2c14368b48d4c21f1",
+  "qaArgFileWrapperSourceSha256": "52ab4a71d2932f3e123fac84ffa8d414f9066087f7538882e503997e5a6be034",
+  "logConfigurationSha256": "a16e625c201b1c483e4dc50088921c5658e7420671c4d1c06a8433ebe049cd34",
+  "loadedModCount": 183,
+  "computerUse": false,
+  "nativeLaunch": {
+    "initialCreateProcess": "FAIL_FILENAME_EXCED_RANGE",
+    "windowsNativeErrorCode": 206,
+    "qaRootCharacters": 96,
+    "rawNativeArgumentCharacters": 35012,
+    "executablePathCharacters": 170,
+    "estimatedNativeCommandCharacters": 35186,
+    "argumentCount": 227,
+    "longestArgumentCharacters": 17740,
+    "sharedRuntimePrefixOccurrences": 104,
+    "modelWithoutFiveQaArgumentsAtSameRootCharacters": 34361,
+    "modelWithoutQaArgumentsAtShortInstallRootCharacters": 25537,
+    "approximateRootThresholdCharacters": 80,
+    "qaArgFile": true,
+    "qaArgFileRemoved": true,
+    "nativeClientExitCode": 0
+  },
+  "checks": {
+    "world_created": {
+      "gameMode": "SURVIVAL",
+      "commands": false
+    },
+    "pause_before_publish": {
+      "nativeButtonCallback": true,
+      "shareToLan": 1,
+      "worldSettingsOrCheats": false
+    },
+    "published": {
+      "nativeListener": true,
+      "settingsClosedOnPublication": true
+    },
+    "native_permissions": {
+      "syntheticGuest": true,
+      "actualPlayerList": true,
+      "checks": {
+        "hostBefore": false,
+        "savedAllowsCommands": false,
+        "hostAfter": false,
+        "savedSurvivalMode": true,
+        "guestAfter": false,
+        "guestBefore": false
+      }
+    },
+    "pause_after_publish": {
+      "reports": true,
+      "worldSettingsOrCheats": false,
+      "shareToLanGone": true
+    },
+    "chat": {
+      "privateEndpointRecorded": false,
+      "greenCopyableAddress": true,
+      "readyLines": 1,
+      "redCloseAction": true,
+      "blueInviteAction": true,
+      "localPortLines": 1,
+      "nativeLocalHistory": true
+    },
+    "world_saved": {
+      "levelDatBytes": 113816,
+      "levelDatSha256": "1917adba2f8c50d079520f518f561028f0d05793b52a1062dc8bf99a4ccae85a"
+    },
+    "complete": {
+      "nativeSteamHost": "PASS",
+      "guestConnection": "NOT RUN"
+    }
+  },
+  "postExitLevelDatSha256": "fb643fa532790d8d3dd54ec476f98b41a56510fc1261f3328eb73f247d9f0606",
+  "sameWorldReopen": "NOT RUN",
+  "twoSteamAccounts": "NOT RUN",
+  "publicInstallation": "NOT RUN"
+}
