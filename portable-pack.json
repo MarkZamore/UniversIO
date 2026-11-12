@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "minecraftVersion": "1.19.2",
+  "loader": {
+    "type": "forge",
+    "version": "43.2.10"
+  },
+  "javaMajorVersion": 17
+}
