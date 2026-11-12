@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "projectId": 325020,
+      "fileId": 3829751,
+      "fileName": "Durability101-forge-1.19-0.0.4.jar",
+      "sizeBytes": 4112,
+      "sha256": "cd55e5385799dff1880d3cad50e6a948d69bd963e6d4f3b5aa2d80224d811ef9",
+      "sourceUrl": "https://mediafilez.forgecdn.net/files/3829/751/Durability101-forge-1.19-0.0.4.jar"
+    },
+    {
+      "projectId": 633823,
+      "fileId": 4886620,
+      "fileName": "almostunified-forge-1.19.2-0.7.2.jar",
+      "sizeBytes": 205173,
+      "sha256": "f8b71660ee36b770250ac743e33cb0ca30e3df18d23982560dc993a061a434a0",
+      "sourceUrl": "https://mediafilez.forgecdn.net/files/4886/620/almostunified-forge-1.19.2-0.7.2.jar"
+    },
+    {
+      "projectId": 808006,
+      "fileId": 4331279,
+      "fileName": "tia-1.19.2-1.0-forge.jar",
+      "sizeBytes": 11074,
+      "sha256": "59a0058b33fc8d6a7b2438ca644acc021c3b90af21fddd90abb80f1ceeb32b02",
+      "sourceUrl": "https://mediafilez.forgecdn.net/files/4331/279/tia-1.19.2-1.0-forge.jar"
+    }
+  ]
+}
