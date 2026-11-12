@@ -1,0 +1,28 @@
+{
+  "authorArchiveSha256": "77a4a794d90096a4947de073466dcf6e0c3a09fd6b939634bbc5633540cde87f",
+  "preview": {
+    "height": 540,
+    "sha256": "415812b3d9c25eab9ed48f169cdf3206e05a9717416aaac3e41417cbf773197c",
+    "sizeBytes": 96478,
+    "width": 960
+  },
+  "schemaVersion": 1,
+  "source": {
+    "archivePath": "overrides/kubejs/assets/universio/textures/bg.png",
+    "height": 1080,
+    "references": [
+      "overrides/config/fancymenu/customization/loading_menu.txt"
+    ],
+    "sha256": "2d671ead41beb3e50f42d9f843adcc40f0b4a3d273d2a51f124a58f26d9bb419",
+    "sizeBytes": 623947,
+    "width": 1920
+  },
+  "transformation": {
+    "format": "JPEG",
+    "method": "center crop and Lanczos resize",
+    "optimize": true,
+    "pillowVersion": "12.3.0",
+    "quality": 92,
+    "subsampling": 0
+  }
+}
