@@ -5,7 +5,7 @@
   "upstreamLockSha256": "d6f800945aa12be434f1404cb20bfbff242c9bb608506174a2c85553b75ade57",
   "launcher": {
     "releaseNumber": 497,
-    "candidateSourceRevision": "e45c6f5",
+    "candidateSourceRevision": "e45c6f5830c8aa4725b4190cf05462097d94b753",
     "candidateAssemblySha256": "fbaff82c87cdb1f86841081238187c1a55dc50521523a0f7ce3d3d207e48446a"
   },
   "minecraftVersion": "1.19.2",
@@ -108,5 +108,12 @@
   "nativeExitCode": 0,
   "computerUse": false,
   "twoSteamAccounts": "NOT RUN",
-  "publicInstall": "NOT RUN"
+  "publicInstall": "NOT RUN",
+  "nativeProofSha256": "060185a0c6edaa282ab1ebfdd60bb77eee175188f6723453a32e8ac4a18ca653",
+  "inputLevelDatSha256": "fb643fa532790d8d3dd54ec476f98b41a56510fc1261f3328eb73f247d9f0606",
+  "postExitLevelDatSha256": "1b17e9271d2ed816f4246820b1c8979d25828bf5acb4553e6cfa043241b1788e",
+  "agentSourceSha256": "040bfda6cd3db20c33c77b350a5c91d0ba25448f99e3fa2412d1fddc4f52111f",
+  "runnerSourceSha256": "a452f0e9533c43930c28ef1c1194ed50970b8b01df584cc5258310af137db050",
+  "launcherLogConfigurationSha256": "a16e625c201b1c483e4dc50088921c5658e7420671c4d1c06a8433ebe049cd34",
+  "selectedPackLogJvmPropertyCount": 1
 }
