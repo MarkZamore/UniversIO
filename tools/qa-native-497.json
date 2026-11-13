@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "packVersion": "5.3",
+  "packCandidateRevision": "0d1b6b5c3e211f38ed17473eb516dc8c329c37f9",
+  "upstreamLockSha256": "d6f800945aa12be434f1404cb20bfbff242c9bb608506174a2c85553b75ade57",
+  "launcher": {
+    "releaseNumber": 497,
+    "candidateSourceRevision": "e45c6f5",
+    "candidateAssemblySha256": "fbaff82c87cdb1f86841081238187c1a55dc50521523a0f7ce3d3d207e48446a"
+  },
+  "minecraftVersion": "1.19.2",
+  "loader": {
+    "type": "forge",
+    "version": "43.2.10"
+  },
+  "descriptorSha256": "8f839318b54a872e7e0cc0dd0c7d735c9cba9c58bfe30c4c75d7b16261279786",
+  "steamComponentSha256": "3f397fc193f14d3c543b5ef9b4613bc149a21ca8e14bd93c39de3d1bc6f9553c",
+  "testAgentSha256": "c1f1d0fe4dd19df20fb4487a3ed380a07606c67d46a75ef1163be9bb76aa0422",
+  "nativeLibrarySha256": "4db6a19771ee7359cbee1b5f4c6d3a3174eea428d1c220fc07b43d607689d85f",
+  "nativeEventsSha256": "bd5b0300aac12ec9d9339eade94097696dceb8d0f9e78cf6ce532913ce4e4737",
+  "productionJavaArgumentFile": {
+    "used": true,
+    "originalCommandCharacters": 35918,
+    "finalCommandCharacters": 1038,
+    "removedAfterProcessExit": true
+  },
+  "nativeModCount": 183,
+  "loadedAuthorModCount": 180,
+  "windowTitles": [
+    {
+      "matches": true,
+      "expected": "UniversIO",
+      "phase": "startup",
+      "actual": "UniversIO",
+      "nativeWindow": true
+    },
+    {
+      "matches": true,
+      "expected": "UniversIO",
+      "phase": "world_before_steam",
+      "actual": "UniversIO",
+      "nativeWindow": true
+    },
+    {
+      "matches": true,
+      "expected": "UniversIO",
+      "phase": "world_after_steam",
+      "actual": "UniversIO",
+      "nativeWindow": true
+    }
+  ],
+  "checks": {
+    "world_reopened": {
+      "gameMode": "SURVIVAL",
+      "commands": false
+    },
+    "pause_before_publish": {
+      "nativeButtonCallback": true,
+      "shareToLan": 1,
+      "worldSettingsOrCheats": false
+    },
+    "published": {
+      "settingsClosedOnPublication": true,
+      "nativeListener": true
+    },
+    "native_permissions": {
+      "syntheticGuest": true,
+      "actualPlayerList": true,
+      "checks": {
+        "hostBefore": false,
+        "savedAllowsCommands": false,
+        "hostAfter": false,
+        "savedSurvivalMode": true,
+        "guestAfter": false,
+        "guestBefore": false
+      }
+    },
+    "pause_after_publish": {
+      "reports": true,
+      "worldSettingsOrCheats": false,
+      "shareToLanGone": true
+    },
+    "chat": {
+      "nativeLocalHistory": true,
+      "privateEndpointRecorded": false,
+      "greenCopyableAddress": true,
+      "readyLines": 1,
+      "redCloseAction": true,
+      "blueInviteAction": true,
+      "localPortLines": 1
+    },
+    "steam_lobby_metadata": {
+      "matchesWorldName": true,
+      "secondAccountDiscovery": "NOT RUN",
+      "matchesLauncherPlayer": true,
+      "actualSteamLobby": true,
+      "displayFlag": true
+    },
+    "world_saved": {
+      "levelDatSha256": "498788fe8e5abf1d697dfcf2fe695460030cd498537dae059de975bda0e65232",
+      "levelDatBytes": 114238
+    },
+    "complete": {
+      "guestConnection": "NOT RUN",
+      "nativeSteamHost": "PASS"
+    }
+  },
+  "nativeExitCode": 0,
+  "computerUse": false,
+  "twoSteamAccounts": "NOT RUN",
+  "publicInstall": "NOT RUN"
+}
