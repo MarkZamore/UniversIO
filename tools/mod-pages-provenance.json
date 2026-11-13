@@ -1,0 +1,164 @@
+{
+  "authorArchiveSha256": "77a4a794d90096a4947de073466dcf6e0c3a09fd6b939634bbc5633540cde87f",
+  "auxiliaryFiles": {
+    "forgeconfigapiport_v6_0_2_1_19_4_fabric": {
+      "fileId": 4451343,
+      "isLoadedModDeclaration": false,
+      "name": "ForgeConfigAPIPort-v6.0.2-1.19.4-Fabric",
+      "path": "mods/ForgeConfigAPIPort-v6.0.2-1.19.4-Fabric.jar",
+      "projectId": 547434,
+      "sha256": "04e6d6b8eac5461b6ebd72b61a9a1c888b23188eda74d5e35e512672e05982b5",
+      "sizeBytes": 415251,
+      "sourceNote": "Exact author JAR is a Fabric artifact. The Forge native ModList omits it; it remains installed as a source-pinned auxiliary.",
+      "version": "6.0.2",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port"
+    }
+  },
+  "individuallyVerified": {
+    "caffeineconfig": {
+      "fileId": 4431017,
+      "jarJarCoordinate": {
+        "artifact": "ColaMixinConfig",
+        "group": "com.github.TexTrueStudio"
+      },
+      "name": "ColaConfig",
+      "nestedPath": "META-INF/jars/ColaMixinConfig-v1.0.2.jar",
+      "nestedSha256": "04f1214f34b62317df45eebaa86fe341dd9a43cbe1cf07edfc854370157496c3",
+      "path": "mods/rubidium-extra-0.4.17+mc1.19.2-build.71.jar",
+      "projectId": 654373,
+      "sha256": "2e21e0469373d1299a077d75151ab421378dfa50c7af2d5ad21070c715549ea2",
+      "sizeBytes": 298970,
+      "sourceNote": "Author repository redirect from exact nested declaration and TexTrueStudio artifact coordinates.",
+      "sourceSha256": "2e21e0469373d1299a077d75151ab421378dfa50c7af2d5ad21070c715549ea2",
+      "version": "1.0.2",
+      "websiteUrl": "https://github.com/ThinkingStudios/cola-config"
+    },
+    "koremods": {
+      "fileId": 4483786,
+      "manifestAttribute": "Additional-Dependencies-Mod",
+      "nestedPath": "koremods-modlauncher-0.6.1-mod.jar",
+      "nestedSha256": "d2abc9e9f9e7b305f1125b6502c5b4a1dfcea37eec2aca074e72cdd5d2cbd610",
+      "path": "mods/koremods-modlauncher-0.6.1.jar",
+      "projectId": 544251,
+      "sourceNote": "Forge native ModList and the parent manifest select the embedded mod archive. Exact parent is CurseForge project 544251, file 4483786.",
+      "sourceSha256": "dc44aefc407fc6e3f67c7ff0997c1217d869da77823c52d4395f11941c9bcfb3",
+      "version": "0.6.1",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/koremods"
+    },
+    "kotlinforforge": {
+      "fileId": 4513187,
+      "jarJarCoordinate": {
+        "artifact": "kffmod",
+        "group": "thedarkcolour"
+      },
+      "name": "Kotlin For Forge",
+      "nestedPath": "META-INF/jarjar/kffmod-3.12.0.jar",
+      "nestedSha256": "d9523a9d40a746dec028504ee0ae9a428bc7fe56fc1c0dc95bdd9a9ef982f631",
+      "path": "mods/kotlinforforge-3.12.0-all.jar",
+      "projectId": 351264,
+      "sha256": "a42d10a97afd3313af57ecc88f531fffb048d89b2aa2fd01c586d67c161fdcca",
+      "sizeBytes": 7365976,
+      "sourceNote": "Official CurseForge project 351264 publishes the exact parent KotlinForForge JAR.",
+      "sourceSha256": "a42d10a97afd3313af57ecc88f531fffb048d89b2aa2fd01c586d67c161fdcca",
+      "version": "3.12.0",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/kotlin-for-forge"
+    },
+    "mixinextras": {
+      "fileId": 4931520,
+      "jarJarCoordinate": {
+        "artifact": "mixinextras-forge",
+        "group": "io.github.llamalad7"
+      },
+      "name": "MixinExtras",
+      "nestedPath": "META-INF/jars/mixinextras-forge-0.2.0-rc.2.jar",
+      "nestedSha256": "fa9dc6759a26b39934973c7285d2030ec6929d696c71b30db2b666b2f7113594",
+      "path": "mods/kubejs-forge-1902.6.2-build.45.jar",
+      "projectId": 238086,
+      "publishedArtifact": {
+        "sameSha256": true,
+        "url": "https://repo.maven.apache.org/maven2/io/github/llamalad7/mixinextras-forge/0.2.0-rc.2/mixinextras-forge-0.2.0-rc.2.jar"
+      },
+      "sha256": "04e93ce64cad932816d335b1ba11276cca12aa6d43ad8094e995a01fb569468a",
+      "sizeBytes": 1538955,
+      "sourceNote": "Exact nested JarJar coordinate and author repository declared by the mod.",
+      "sourceSha256": "04e93ce64cad932816d335b1ba11276cca12aa6d43ad8094e995a01fb569468a",
+      "version": "0.2.0-rc.2",
+      "websiteUrl": "https://github.com/LlamaLad7/MixinExtras"
+    },
+    "mixinsquared": {
+      "fileId": 4882278,
+      "jarJarCoordinate": {
+        "artifact": "mixinsquared-forge",
+        "group": "com.github.bawnorton.mixinsquared"
+      },
+      "name": "MixinSquared",
+      "nestedPath": "META-INF/jars/mixinsquared-forge-0.1.1.jar",
+      "nestedSha256": "f9bbe907636237cd172a54afe443f60b1a9691f20286fc9b5fd98220b65b05f6",
+      "path": "mods/neruina-1.3.0-forge+1.18.2-1.20.1.jar",
+      "projectId": 851046,
+      "sha256": "54cf6f1a26e214cf353fde28fec5053acaba34d139ae664e386cd0c5625f11e5",
+      "sizeBytes": 313670,
+      "sourceNote": "Exact nested JarJar coordinate and author repository declared by the mod.",
+      "sourceSha256": "54cf6f1a26e214cf353fde28fec5053acaba34d139ae664e386cd0c5625f11e5",
+      "version": "0.1.1",
+      "websiteUrl": "https://github.com/Bawnorton/MixinSquared"
+    },
+    "spectrelib": {
+      "fileId": 4629009,
+      "jarJarCoordinate": {
+        "artifact": "spectrelib-forge",
+        "group": "com.illusivesoulworks.spectrelib"
+      },
+      "name": "SpectreLib",
+      "nestedPath": "META-INF/jarjar/spectrelib-forge-0.12.5+1.19.2.jar",
+      "nestedSha256": "56b7f0ea22d9767553e6ac795b1a30b5ec1e90e3a730956437fe9bce5fecab94",
+      "path": "mods/polymorph-forge-0.46.4+1.19.2.jar",
+      "projectId": 388800,
+      "publishedArtifact": {
+        "mismatchedEntries": [
+          "META-INF/MANIFEST.MF"
+        ],
+        "sha256": "e30b8675b42afe5aba502414520d2d7b16415d264a4da26041c6e67abd739b01",
+        "url": "https://maven.theillusivec4.top/com/illusivesoulworks/spectrelib/spectrelib-forge/0.12.5%2B1.19.2/spectrelib-forge-0.12.5%2B1.19.2.jar"
+      },
+      "sha256": "da70aa45d51bb6f2c09af2bc62b5291323116116e59ae4836772936f210b432a",
+      "sizeBytes": 256024,
+      "sourceNote": "Official author Maven 0.12.5+1.19.2 contains identical payload entries except META-INF/MANIFEST.MF. Nested bundle retains its own SHA256.",
+      "sourceSha256": "da70aa45d51bb6f2c09af2bc62b5291323116116e59ae4836772936f210b432a",
+      "version": "0.12.5+1.19.2",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/spectrelib"
+    }
+  },
+  "nativeEvidence": {
+    "authorModJarCount": 176,
+    "excludedIds": {
+      "e4steam": {
+        "nativeSourceFile": "e4steam-forge-mc1.18.2-1.20.2-v0.3.4-lanmc-native-ui.2.jar",
+        "version": "0.3.4"
+      },
+      "forge": {
+        "nativeSourceFile": "forge-1.19.2-43.2.10-universal.jar",
+        "version": "43.2.10"
+      },
+      "minecraft": {
+        "nativeSourceFile": "client-1.19.2-20220805.130853-srg.jar",
+        "version": "1.19.2"
+      }
+    },
+    "loadedAuthorModCount": 180,
+    "nativeModCount": 183,
+    "observedModListSha256": "fc2e1fe25014807f115c91610fbfe28668c10a2fb95151cbe157f8ccd0545796",
+    "steamComponentSha256": "3f397fc193f14d3c543b5ef9b4613bc149a21ca8e14bd93c39de3d1bc6f9553c",
+    "summaryPath": "tools/qa-native-steam.json",
+    "summarySha256": "8f640e53a8aef8e97a21ca175e68756fea34169fc20443466f8b0085e1884a14"
+  },
+  "officialCurseForgeProjectRecords": {
+    "directLoadedModCount": 174,
+    "normalizedCacheSha256": "605e07b92dcdcbfb6166550693884838fb4919f0c5cb739947fa34d8ca37893b",
+    "projectCount": 176,
+    "projectEndpointTemplate": "https://api.modpacks.ch/public/curseforge/{projectId}"
+  },
+  "packVersion": "5.3",
+  "schemaVersion": 1,
+  "upstreamLockSha256": "d6f800945aa12be434f1404cb20bfbff242c9bb608506174a2c85553b75ade57"
+}
