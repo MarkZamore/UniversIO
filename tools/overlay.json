@@ -29,6 +29,29 @@
       "sha256": "a1f3a734e672681e16e8db9a35ece57236720f99f95a85bac9eb2caac1e19d3c"
     }
   ],
+  "clientScripts": {
+    "dependencies": [
+      {
+        "projectId": 238086,
+        "fileId": 4931520
+      },
+      {
+        "projectId": 367706,
+        "fileId": 4655947
+      },
+      {
+        "projectId": 416294,
+        "fileId": 4953345
+      }
+    ],
+    "files": [
+      {
+        "path": "kubejs/client_scripts/lanmc_menu_player_skin.js",
+        "sizeBytes": 1656,
+        "sha256": "e7644bc1a1b66eebc689ace7a21f585118bd7ee72c67abf3c8d638834b25521b"
+      }
+    ]
+  },
   "bookLocalization": [
     {
       "path": "config/ftbquests/quests/chapter_groups.snbt",
