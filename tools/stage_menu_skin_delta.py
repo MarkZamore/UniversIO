@@ -78,8 +78,9 @@ def stage(launcher, workspace, previous, output, revision):
         prepare.require(Counter(archive.namelist()) == Counter(owner_asset["covers"]), "Unexpected previous ownership archive files")
         owner_files = {name: archive.read(name) for name in archive.namelist()}
     prepare.require(prepare.fingerprint(owner_files[OWNERSHIP]) == {k: previous_ownership[k] for k in ("sha256", "sizeBytes")} and
-                    owner_files[OWNERSHIP].splitlines() + [SCRIPT.encode()] == ownership.splitlines(),
-                    "Ownership changes must append only the menu script")
+                    ownership.splitlines().count(SCRIPT.encode()) == 1 and
+                    [line for line in ownership.splitlines() if line != SCRIPT.encode()] == owner_files[OWNERSHIP].splitlines(),
+                    "Ownership may add only the menu script")
     owner_files[OWNERSHIP] = ownership
     for name, data in owner_files.items():
         prepare.require(prepare.fingerprint(data) == {k: files[name][k] for k in ("sha256", "sizeBytes")}, f"Changed ownership archive member: {name}")
