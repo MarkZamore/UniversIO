@@ -6,7 +6,6 @@ import io
 import json
 import os
 import pathlib
-import secrets
 import shutil
 import stat
 import struct
@@ -25,7 +24,7 @@ PACK = PROJECT / "Minecraft/Packs/UniversIO"
 PROFILE = "1.19.2-forge-43.2.10"
 REVISION = "38bc16b005fe4805c4d863f975686992089786ce"
 MANIFEST = "5230624acca074821b9e5f410063eabe245516cda799946b50048b3b66e15960"
-SCRIPT = "e7644bc1a1b66eebc689ace7a21f585118bd7ee72c67abf3c8d638834b25521b"
+SCRIPT = "1e1b5b85a13ee4a6c667ec501613f378177ab098d0a9502d6b6e6afb9a520e50"
 MENU = "47d46f7befbad3abf5ea07123feb507d06e896fec1dcc91072fe8f500387770a"
 STEAM = "e4steam-forge-mc1.18.2-1.20.2-v0.3.4-lanmc-native-ui.2.jar"
 STEAM_SHA = "3f397fc193f14d3c543b5ef9b4613bc149a21ca8e14bd93c39de3d1bc6f9553c"
@@ -140,7 +139,7 @@ def run_game(mode, inputs, steam, adapter_state):
     key = "UniversioTitleSkin"
     game, evidence = (FIXTURE / name / key for name in ("game", "evidence"))
     work = FIXTURE / "universio-title-scratch"
-    receipt = FIXTURE / f"UniversioTitleSkin-{mode}"
+    receipt = FIXTURE / f"UniversioTitleSkin-{mode}-{SCRIPT[:8]}"
     if any(p.exists() for p in (work, receipt, game, evidence)):
         raise RuntimeError("Use a fresh owned fixture; existing data remains for review")
     for directory in (work, work / "classes", receipt, FIXTURE / "game"):
@@ -148,8 +147,7 @@ def run_game(mode, inputs, steam, adapter_state):
     skin = png_skin()
     png_sha = sha(skin)
     player = str(uuid.UUID("70254ec69d1f449b92def1ce35f8bcc4"))
-    # Include a throwaway path segment to verify this particular isolated HTTP service.
-    route = f"/skin/{player}/{secrets.token_hex(8)}/{png_sha}"
+    route = f"/skin/{player}/{png_sha}"
     # authlib 3.11.49 gets the filename; SkinManager hashes the Java UTF-16 code units with SHA-1.
     location = "minecraft:skins/" + hashlib.sha1(png_sha.encode("utf-16-le")).hexdigest()
     hits = []
@@ -203,6 +201,7 @@ def run_game(mode, inputs, steam, adapter_state):
                         raise RuntimeError("Synthetic PNG is not served byte for byte")
                 prior = len(hits)
                 props = ["-Dminecraft.portable.skin.registry=" + str(registry),
+                         "-Dminecraft.portable.identity.localPlayer=" + player,
                          "-Dlanminecraft.steamqa.fixtureSkinLocation=" + location,
                          "-Dlanminecraft.steamqa.fixtureSkinSlim=" + str(model == "slim").lower(),
                          "-Dlanminecraft.steamqa.fixtureSkinNegative=" + str(mode == "Control").lower()]

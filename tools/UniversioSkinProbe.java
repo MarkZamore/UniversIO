@@ -2,7 +2,6 @@ import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.minecraft.MinecraftProfileTexture;
 import com.mojang.authlib.minecraft.MinecraftProfileTexture.Type;
 import dev.latvian.mods.rhino.Context;
-import dev.latvian.mods.rhino.Function;
 import dev.latvian.mods.rhino.NativeJavaClass;
 import dev.latvian.mods.rhino.Scriptable;
 import dev.latvian.mods.rhino.ScriptableObject;
@@ -12,6 +11,7 @@ import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+import java.util.function.Consumer;
 import java.util.zip.GZIPInputStream;
 
 public class UniversioSkinProbe {
@@ -28,45 +28,43 @@ public class UniversioSkinProbe {
             var remapper = MinecraftRemapper.load(mapping, false);
             context.setRemapper(remapper);
             Scriptable scope = context.initStandardObjects();
-            var events = new Events();
             bind(context, scope, "Java", new Classes(context, scope));
-            bind(context, scope, "ClientEvents", events);
             context.evaluateString(scope, script, args[0], 1, null);
-            check(events.paintScreen != null, "paintScreen is registered");
+            check(Forge.EVENT_BUS.screenRender != null, "native Forge screen listener is registered");
             var mc = new Minecraft();
             var main = new TitleScreen();
             var model = new Model();
             Players.ELEMENT_CACHE.put(ITEM, model);
             var other = new Model();
             Players.ELEMENT_CACHE.put("other-player", other);
-            fire(context, scope, events, new Object(), mc);
+            fire(new Object(), mc);
             check(mc.session.reads == 0, "other menu is ignored");
             model.copyClientPlayer = false;
-            fire(context, scope, events, main, mc);
+            fire(main, mc);
             check(mc.session.reads == 0, "author copy-player setting is respected");
             model.copyClientPlayer = true;
-            fire(context, scope, events, main, mc);
+            fire(main, mc);
             check(mc.session.reads == 1 && mc.skins.registrations == 0, "missing profile texture keeps defaults");
-            fire(context, scope, events, main, mc);
+            fire(main, mc);
             check(mc.session.reads == 1, "missing textures throttle repeated lookups");
             mc.session.skin = new MinecraftProfileTexture("https://localhost/skin.png", Map.of("model", "slim"));
             Thread.sleep(1050);
-            fire(context, scope, events, main, mc);
+            fire(main, mc);
             check(model.slim && mc.skins.registrations == 1, "slim launcher skin is registered once");
             check(model.slimRenderer.properties.texture.equals(mc.skins.location) &&
                   model.normalRenderer.properties.replacements == 0, "only the active FancyMenu renderer picks up the native texture");
             check(other.normalRenderer.properties.replacements == 0, "different FancyMenu player element remains at default");
             int replacements = model.slimRenderer.properties.replacements;
-            fire(context, scope, events, main, mc);
+            fire(main, mc);
             check(mc.session.reads == 2 && mc.skins.registrations == 1 &&
                     model.slimRenderer.properties.replacements == replacements, "unchanged resolved texture avoids further lookup, registration, and writes");
             model.slimRenderer.properties.texture = new Location("old");
             model.slim = false;
-            fire(context, scope, events, main, mc);
+            fire(main, mc);
             check(model.slim && model.slimRenderer.properties.texture.equals(mc.skins.location), "late FancyMenu update is corrected");
             Model recreated = new Model();
             Players.ELEMENT_CACHE.put(ITEM, recreated);
-            fire(context, scope, events, main, mc);
+            fire(main, mc);
             check(recreated.slim && recreated.slimRenderer.properties.texture.equals(mc.skins.location) &&
                     mc.skins.registrations == 1, "new FancyMenu cache element uses the cached native texture");
             context.evaluateString(scope, script, args[0], 1, null);
@@ -75,8 +73,9 @@ public class UniversioSkinProbe {
             var classic = new Model();
             classic.slim = true;
             Players.ELEMENT_CACHE.put(ITEM, classic);
-            fire(context, scope, events, main, classicClient);
+            fire(main, classicClient);
             check(!classic.slim && classic.normalRenderer.properties.texture.equals(classicClient.skins.location), "classic launcher skin uses the classic renderer");
+            mapped(remapper, "net.minecraft.client.Minecraft", "m_91087_", "getInstance");
             mapped(remapper, "net.minecraft.client.Minecraft", "m_91094_", "getUser");
             mapped(remapper, "net.minecraft.client.User", "m_92548_", "getGameProfile");
             mapped(remapper, "net.minecraft.client.Minecraft", "m_91108_", "getMinecraftSessionService");
@@ -95,8 +94,9 @@ public class UniversioSkinProbe {
         ScriptableObject.putProperty(scope, name, Context.javaToJS(context, value, scope), context);
     }
 
-    private static void fire(Context context, Scriptable scope, Events events, Object screen, Minecraft client) {
-        events.paintScreen.call(context, scope, scope, new Object[]{Context.javaToJS(context, new Paint(screen, client), scope)});
+    private static void fire(Object screen, Minecraft client) {
+        Minecraft.active = client;
+        Forge.EVENT_BUS.screenRender.accept(new ScreenEvent(screen));
     }
 
     private static void check(boolean ok, String label) {
@@ -111,6 +111,10 @@ public class UniversioSkinProbe {
         public NativeJavaClass loadClass(String name) {
             Class<?> result = switch (name) {
                 case "net.minecraft.client.gui.screens.TitleScreen" -> TitleScreen.class;
+                case "net.minecraft.client.Minecraft" -> Minecraft.class;
+                case "net.minecraftforge.common.MinecraftForge" -> Forge.class;
+                case "net.minecraftforge.eventbus.api.EventPriority" -> Priority.class;
+                case "net.minecraftforge.client.event.ScreenEvent$Render$Post" -> ScreenEvent.class;
                 case "com.mojang.authlib.minecraft.MinecraftProfileTexture$Type" -> Type.class;
                 case PLAYER_CACHE -> Players.class;
                 default -> throw new AssertionError("Unknown class " + name);
@@ -119,9 +123,21 @@ public class UniversioSkinProbe {
         }
     }
 
-    public static class Events {
-        Function paintScreen;
-        public void paintScreen(Function listener) { paintScreen = listener; }
+    public static class Forge {
+        public static final EventBus EVENT_BUS = new EventBus();
+    }
+
+    public enum Priority { LOWEST }
+
+    public static class EventBus {
+        private Consumer<ScreenEvent> screenRender;
+        public void addListener(Priority priority, boolean receiveCancelled, Class<ScreenEvent> eventType,
+                                Consumer<ScreenEvent> listener) {
+            if (priority != Priority.LOWEST || receiveCancelled || eventType != ScreenEvent.class) {
+                throw new AssertionError("Expected typed native Forge screen listener");
+            }
+            screenRender = listener;
+        }
     }
 
     public static class TitleScreen {}
@@ -154,16 +170,18 @@ public class UniversioSkinProbe {
 
     public record Location(String texture) {}
 
-    public static class Paint {
+    public static class ScreenEvent {
         public final Object screen;
-        public final Minecraft mc;
-        Paint(Object screen, Minecraft mc) { this.screen = screen; this.mc = mc; }
+        ScreenEvent(Object screen) { this.screen = screen; }
+        public Object getScreen() { return screen; }
     }
 
     public static class Minecraft {
+        private static Minecraft active;
         private final User user = new User();
         private final Session session = new Session(user.profile);
         private final SkinManager skins = new SkinManager();
+        public static Minecraft getInstance() { return active; }
         public User getUser() { return user; }
         public Session getMinecraftSessionService() { return session; }
         public SkinManager getSkinManager() { return skins; }
