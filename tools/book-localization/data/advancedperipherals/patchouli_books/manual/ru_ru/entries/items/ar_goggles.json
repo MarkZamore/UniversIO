@@ -1,0 +1,15 @@
+{
+  "name": "Очки доп. реальности",
+  "icon": "advancedperipherals:ar_goggles",
+  "category": "advancedperipherals:items",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Вместе с $(9)$(l:peripherals/ar_controller)контроллером доп. реальности$(/l)$() эти очки показывают настраиваемый интерфейс, куда бы вы ни пошли.$(p)Чтобы связать очки с контроллером, щёлкните ими по нему правой кнопкой.$(p)Подробности есть на $(9)$(l:https://docs.intelligence-modding.de/items/ar_goggles/)официальной вики$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:ar_goggles"
+    }
+  ]
+}

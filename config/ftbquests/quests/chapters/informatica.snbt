@@ -1,0 +1,218 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "informatica"
+	group: ""
+	icon: "computercraft:printed_pages"
+	id: "21BCD11F7C78692E"
+	images: [{
+		click: ""
+		corner: false
+		dev: false
+		height: 9.0d
+		hover: [ ]
+		image: "universio:textures/title_nbg.png"
+		rotation: 0.0d
+		width: 24.0d
+		x: 0.0d
+		y: -3.0d
+	}]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"{lanminecraft.universio.quests.informatica.c024bf81ec27}"
+				""
+				"{lanminecraft.universio.quests.informatica.b9652a4b3b2a}"
+				""
+				"{lanminecraft.universio.quests.informatica.3ac997323878}"
+				""
+				"{lanminecraft.universio.quests.informatica.c6fa2432b9dc}"
+				""
+				"{lanminecraft.universio.quests.informatica.25a9b421d80c}"
+				""
+				"{lanminecraft.universio.quests.informatica.96e9232751c4}"
+				""
+				"{lanminecraft.universio.quests.informatica.30f65e746875}"
+			]
+			icon: "universutil:mark"
+			id: "0325F0340C37E5AE"
+			rewards: [{
+				id: "7B23189739AF2EEB"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			size: 2.0d
+			subtitle: "{lanminecraft.universio.quests.informatica.4ae2e4e76ca5}"
+			tasks: [{
+				id: "2FEABABCC9E3C688"
+				type: "checkmark"
+			}]
+			title: "{lanminecraft.universio.quests.informatica.1a134db67470}"
+			x: 8.0d
+			y: -2.0d
+		}
+		{
+			description: [
+				"{lanminecraft.universio.quests.informatica.e88945c46997}"
+				""
+				"{lanminecraft.universio.quests.informatica.ce4bdf24f372}"
+				""
+				"{lanminecraft.universio.quests.informatica.f71978e284ab}"
+			]
+			icon: "computercraft:printed_book"
+			id: "59FDF5FDB54E26C2"
+			rewards: [{
+				id: "6D8ED2E93CCD3AED"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			size: 2.0d
+			subtitle: "{lanminecraft.universio.quests.informatica.acf9631a062d}"
+			tasks: [{
+				id: "54902E072D809B5D"
+				type: "checkmark"
+			}]
+			title: "{lanminecraft.universio.quests.informatica.e9e509dcd358}"
+			x: 7.0d
+			y: 0.0d
+		}
+		{
+			description: ["{lanminecraft.universio.quests.informatica.6a4d8d97a552}"]
+			icon: "tombstone:advancement_2"
+			id: "06EDCC488BACF22E"
+			rewards: [{
+				id: "2958105DC70DDD6D"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			size: 2.0d
+			subtitle: "{lanminecraft.universio.quests.informatica.0bf7f38adc87}"
+			tasks: [{
+				id: "0614868724CC1DD3"
+				type: "checkmark"
+			}]
+			title: "{lanminecraft.universio.quests.informatica.4efca0d10c5f}"
+			x: 8.0d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"59FDF5FDB54E26C2"
+				"0325F0340C37E5AE"
+				"06EDCC488BACF22E"
+				"7A50E3475E5C5742"
+			]
+			hide_text_until_complete: true
+			icon: "projectexpansion:final_star"
+			id: "76CEE0C6AEBFAFA8"
+			rewards: [
+				{
+					id: "08106E2682B54B06"
+					item: {
+						Count: 1
+						id: "tempad:he_who_remains_tempad"
+						tag: {
+							Enchantments: [{
+								id: "tombstone:soulbound"
+								lvl: 1
+							}]
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2AF8855FDCE0F203"
+					item: {
+						Count: 1
+						id: "numismaticoverhaul:gold_coin"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			size: 2.0d
+			subtitle: "{lanminecraft.universio.quests.informatica.8d8406f7ffd0}"
+			tasks: [{
+				id: "583973991EBB6690"
+				title: "{lanminecraft.universio.quests.informatica.9d9974da4c65}"
+				type: "checkmark"
+			}]
+			title: "{lanminecraft.universio.quests.informatica.9ebe423fe3e7}"
+			x: 5.3214285714285765d
+			y: -2.9872448979591866d
+		}
+		{
+			description: [
+				"{lanminecraft.universio.quests.informatica.0c4855562cf7}"
+				""
+				"{lanminecraft.universio.quests.informatica.1bea60303f2e}"
+				""
+				"{lanminecraft.universio.quests.informatica.90e1ca9f41b2}"
+				""
+				"{lanminecraft.universio.quests.informatica.8011a0660fc4}"
+				""
+				"{lanminecraft.universio.quests.informatica.dcb4a188fbd0}"
+			]
+			icon: {
+				Count: 1
+				id: "numismaticoverhaul:gold_coin"
+				tag: { }
+			}
+			id: "7A50E3475E5C5742"
+			rewards: [
+				{
+					id: "68BF0CB5D29983BF"
+					item: {
+						Count: 1
+						id: "numismaticoverhaul:bronze_coin"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "71B35170DC3EE01A"
+					item: {
+						Count: 1
+						id: "numismaticoverhaul:silver_coin"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "3F071B2DDA43AAE6"
+					item: {
+						Count: 1
+						id: "numismaticoverhaul:gold_coin"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			size: 2.0d
+			subtitle: "T.H.A.U.S."
+			tasks: [{
+				id: "15A6193903464D28"
+				type: "checkmark"
+			}]
+			title: "{lanminecraft.universio.quests.informatica.e953de6f4614}"
+			x: 7.0d
+			y: -6.0d
+		}
+	]
+	title: "{lanminecraft.universio.quests.informatica.b63e07ecb2a6}"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Введение",
+  "icon": "advancedperipherals:weak_automata_core",
+  "category": "advancedperipherals:metaphysics",
+  "priority": true,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Мир ещё полон тайн. Вы чувствуете, что даже простую черепашку можно превратить в мощный инструмент управления действительностью. Нужно лишь вложить в неё что-то настоящее. Например… душу?"
+    }
+  ]
+}

@@ -6,3 +6,9 @@
 /tools/network-logging-policy.json text eol=lf
 /tools/network_logging_policy.py text eol=lf
 *.json text eol=lf
+/licenses/*.txt text eol=lf
+*.snbt -text
+/patchouli_books/universutil/book.json -text
+/config/ftbquests/quests/*.snbt whitespace=cr-at-eol
+/config/ftbquests/quests/chapters/*.snbt whitespace=cr-at-eol
+/patchouli_books/universutil/book.json whitespace=cr-at-eol

@@ -2,7 +2,21 @@
   "schemaVersion": 1,
   "authorArchiveSha256": "77a4a794d90096a4947de073466dcf6e0c3a09fd6b939634bbc5633540cde87f",
   "descriptorSha256": "8f839318b54a872e7e0cc0dd0c7d735c9cba9c58bfe30c4c75d7b16261279786",
-  "patches": [],
+  "patches": [
+    {
+      "path": "patchouli_books/universutil/book.json",
+      "before": {
+        "sizeBytes": 251,
+        "sha256": "c744b60d6ec3c683d212f5b0cbad5e6255052390f9b8528ac04e905df32be487"
+      },
+      "after": {
+        "sizeBytes": 242,
+        "sha256": "699f0446bd8f8ba5f786c329e312227dfdd5012a0c8799c394ede4307f2c377f"
+      },
+      "from": "Help Regarding Items From The Universutil Mod",
+      "to": "lanminecraft.universio.guide.landing"
+    }
+  ],
   "additions": [
     {
       "path": "config/log4j2.xml",
@@ -13,6 +27,774 @@
       "path": "launcher/jvm-args.txt",
       "sizeBytes": 44,
       "sha256": "a1f3a734e672681e16e8db9a35ece57236720f99f95a85bac9eb2caac1e19d3c"
+    }
+  ],
+  "bookLocalization": [
+    {
+      "path": "config/ftbquests/quests/chapter_groups.snbt",
+      "inputs": {
+        "config/ftbquests/quests/chapter_groups.snbt": {
+          "sizeBytes": 165,
+          "sha256": "c587e3a66fc3a771a428ba954aa2a7b1cefb0340ce514a10650aa0236a3ab1ab"
+        }
+      },
+      "before": {
+        "sizeBytes": 165,
+        "sha256": "c587e3a66fc3a771a428ba954aa2a7b1cefb0340ce514a10650aa0236a3ab1ab"
+      },
+      "output": {
+        "sizeBytes": 230,
+        "sha256": "c5345be2ef0fe29223167ef393a182007057d099fc37fde7ec9a3987c2ac2331"
+      }
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/5lsession_aavr_even_fancier_elements.snbt",
+      "inputs": {
+        "config/ftbquests/quests/chapters/5lsession_aavr_even_fancier_elements.snbt": {
+          "sizeBytes": 11900,
+          "sha256": "09ff60aca2d5c162f78eedad4807736bc61d270ad35e5521cecb09ce64a2f2ec"
+        }
+      },
+      "before": {
+        "sizeBytes": 11900,
+        "sha256": "09ff60aca2d5c162f78eedad4807736bc61d270ad35e5521cecb09ce64a2f2ec"
+      },
+      "output": {
+        "sizeBytes": 11985,
+        "sha256": "6cb692cdbbd42d4770d63c65ea1c149b9f364bde466f3d7076ec1e61055d4d21"
+      }
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/6lact_iir_7industrial_age.snbt",
+      "inputs": {
+        "config/ftbquests/quests/chapters/6lact_iir_7industrial_age.snbt": {
+          "sizeBytes": 23894,
+          "sha256": "bbb012b525b57563721c899b46d664851ff3cdcbba3a40b48d144cfefacb53b3"
+        }
+      },
+      "before": {
+        "sizeBytes": 23894,
+        "sha256": "bbb012b525b57563721c899b46d664851ff3cdcbba3a40b48d144cfefacb53b3"
+      },
+      "output": {
+        "sizeBytes": 29182,
+        "sha256": "9cb20533e335f6897882c3988e133d083928a9eb0b1c44fecd4024ee5eb54a70"
+      }
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/6lact_ir_primal_age.snbt",
+      "inputs": {
+        "config/ftbquests/quests/chapters/6lact_ir_primal_age.snbt": {
+          "sizeBytes": 20931,
+          "sha256": "c2e8363d2644396a44476f40c1a8b0cd60d52b4a60576899ed08b7003ca87898"
+        }
+      },
+      "before": {
+        "sizeBytes": 20931,
+        "sha256": "c2e8363d2644396a44476f40c1a8b0cd60d52b4a60576899ed08b7003ca87898"
+      },
+      "output": {
+        "sizeBytes": 24794,
+        "sha256": "e56ec90da156310a5682ccd7b144614d425ff1f3044e0c57a7c692d24d3d47ba"
+      }
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/6lact_ivr_digital_age.snbt",
+      "inputs": {
+        "config/ftbquests/quests/chapters/6lact_ivr_digital_age.snbt": {
+          "sizeBytes": 36232,
+          "sha256": "09a69906dce744e3ce84e449d67de354ddb86bea2eafad96a94e11dc884d239f"
+        }
+      },
+      "before": {
+        "sizeBytes": 36232,
+        "sha256": "09a69906dce744e3ce84e449d67de354ddb86bea2eafad96a94e11dc884d239f"
+      },
+      "output": {
+        "sizeBytes": 37037,
+        "sha256": "207402238a91246fdd99fe2c514303a0fe7f73cc3963560fbd6b41a145f9d4e4"
+      }
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/act_new_universe.snbt",
+      "inputs": {
+        "config/ftbquests/quests/chapters/act_new_universe.snbt": {
+          "sizeBytes": 11917,
+          "sha256": "464a1eaac08a08ea9e1496d205481434b1eb00a8f784ee48eb92d03596968de7"
+        }
+      },
+      "before": {
+        "sizeBytes": 11917,
+        "sha256": "464a1eaac08a08ea9e1496d205481434b1eb00a8f784ee48eb92d03596968de7"
+      },
+      "output": {
+        "sizeBytes": 13221,
+        "sha256": "f8f2269c42441f2891cfed2b44fad9e44be8e1d6b251e70ff93e91f3564d55ee"
+      }
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/blpsi_0_act_side_actr_place_holder.snbt",
+      "inputs": {
+        "config/ftbquests/quests/chapters/blpsi_0_act_side_actr_place_holder.snbt": {
+          "sizeBytes": 705,
+          "sha256": "1465581e1ca6bae22b2bf937d1917bf9e42addd706130ed8ef66049bf594ac22"
+        }
+      },
+      "before": {
+        "sizeBytes": 705,
+        "sha256": "1465581e1ca6bae22b2bf937d1917bf9e42addd706130ed8ef66049bf594ac22"
+      },
+      "output": {
+        "sizeBytes": 820,
+        "sha256": "59d3c3972b5d2953338c5ed7a12b984542cbacfdec503eaf243ffa3f234ccc55"
+      }
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/informatica.snbt",
+      "inputs": {
+        "config/ftbquests/quests/chapters/informatica.snbt": {
+          "sizeBytes": 5545,
+          "sha256": "0952048d388b20c492bb9832d79e546f60a084a4e0fef6c59e53e0038a51c5f5"
+        }
+      },
+      "before": {
+        "sizeBytes": 5545,
+        "sha256": "0952048d388b20c492bb9832d79e546f60a084a4e0fef6c59e53e0038a51c5f5"
+      },
+      "output": {
+        "sizeBytes": 5032,
+        "sha256": "ad4f210d52e3d9f65261bdd67669ae9418b53a9fdc120b1bef85cb2a704439ed"
+      }
+    },
+    {
+      "path": "kubejs/assets/advancedperipherals/lang/en_us.json",
+      "inputs": {
+        "mods/AdvancedPeripherals-1.19.2-0.7.29r.jar": {
+          "projectId": 431725,
+          "fileId": 4617721,
+          "sizeBytes": 871155,
+          "sha256": "af03e1f85e1d64c7020a1527fd4fd89f8e9faf6bed15e029d6bb61530b7d5fd4"
+        }
+      },
+      "output": {
+        "sizeBytes": 245,
+        "sha256": "acbf7d8c3a46b925b5b252e9e7c434b303bf30b05afab57eae6f29982a157a4e"
+      }
+    },
+    {
+      "path": "kubejs/assets/advancedperipherals/lang/ru_ru.json",
+      "inputs": {
+        "mods/AdvancedPeripherals-1.19.2-0.7.29r.jar": {
+          "projectId": 431725,
+          "fileId": 4617721,
+          "sizeBytes": 871155,
+          "sha256": "af03e1f85e1d64c7020a1527fd4fd89f8e9faf6bed15e029d6bb61530b7d5fd4"
+        }
+      },
+      "output": {
+        "sizeBytes": 312,
+        "sha256": "a518f138a81bea5ea1600429bf4edcb7511ba47434da823f93d453dfb812a155"
+      }
+    },
+    {
+      "path": "kubejs/assets/botania/lang/ru_ru.json",
+      "inputs": {
+        "mods/Botania-1.19.2-440-FORGE.jar": {
+          "projectId": 225643,
+          "fileId": 4557912,
+          "sizeBytes": 11569818,
+          "sha256": "cd56e89845349b9dff7a8112c4811818fab8e325c8597277059d531ddde6111f"
+        }
+      },
+      "output": {
+        "sizeBytes": 68730,
+        "sha256": "fb42a4e2b0775b8c51f46568d9b40dc8f3bc74409f4db1356931bebb60940441"
+      }
+    },
+    {
+      "path": "kubejs/assets/hexcasting/lang/ru_ru.json",
+      "inputs": {
+        "mods/hexcasting-forge-1.19.2-0.10.3.jar": {
+          "projectId": 569849,
+          "fileId": 4166956,
+          "sizeBytes": 2906265,
+          "sha256": "51e99f9a2ff67f339227f16565b0090d090b2ed5ce503bdc042d6c3371b4c15d"
+        }
+      },
+      "output": {
+        "sizeBytes": 159593,
+        "sha256": "cb29fde1888c54c17e711bfe1b11cef212125a50f643defd00b1d64fb3d46965"
+      }
+    },
+    {
+      "path": "kubejs/assets/squirtgun/lang/en_us.json",
+      "inputs": {
+        "mods/squirtgun-1.19.2-1.1.1.jar": {
+          "projectId": 716274,
+          "fileId": 4256080,
+          "sizeBytes": 565024,
+          "sha256": "9b5ecde9e7595f79380d056484429ab3b1e9602588194650dcad85e747e08e1d"
+        }
+      },
+      "output": {
+        "sizeBytes": 120,
+        "sha256": "6f8a854a5281bebbea41c374b8720bc42c9018e8b2f2963bd2e56417f0f9b5d0"
+      }
+    },
+    {
+      "path": "kubejs/assets/squirtgun/lang/ru_ru.json",
+      "inputs": {
+        "mods/squirtgun-1.19.2-1.1.1.jar": {
+          "projectId": 716274,
+          "fileId": 4256080,
+          "sizeBytes": 565024,
+          "sha256": "9b5ecde9e7595f79380d056484429ab3b1e9602588194650dcad85e747e08e1d"
+        }
+      },
+      "output": {
+        "sizeBytes": 390,
+        "sha256": "b44bf3c9205c59b00ab196c7a0d80f999e0e16a7275051c8a519ff15dc34ac56"
+      }
+    },
+    {
+      "path": "kubejs/assets/universio/lang/en_us.json",
+      "inputs": {
+        "patchouli_books/universutil/book.json": {
+          "sizeBytes": 251,
+          "sha256": "c744b60d6ec3c683d212f5b0cbad5e6255052390f9b8528ac04e905df32be487"
+        }
+      },
+      "output": {
+        "sizeBytes": 96,
+        "sha256": "82c1eb35bcf1e49158697e61059d92928b67f20ff543633055dab00a028caa3f"
+      }
+    },
+    {
+      "path": "kubejs/assets/universio/lang/ru_ru.json",
+      "inputs": {
+        "patchouli_books/universutil/book.json": {
+          "sizeBytes": 251,
+          "sha256": "c744b60d6ec3c683d212f5b0cbad5e6255052390f9b8528ac04e905df32be487"
+        }
+      },
+      "output": {
+        "sizeBytes": 116,
+        "sha256": "395ce895ad9335b30c695380f270265ff4399216a180fd98f78eae41b49c2d3c"
+      }
+    },
+    {
+      "path": "kubejs/assets/universio_quests/lang/en_us.json",
+      "inputs": {
+        "config/ftbquests/quests/chapter_groups.snbt": {
+          "sizeBytes": 165,
+          "sha256": "c587e3a66fc3a771a428ba954aa2a7b1cefb0340ce514a10650aa0236a3ab1ab"
+        },
+        "config/ftbquests/quests/chapters/5lsession_aavr_even_fancier_elements.snbt": {
+          "sizeBytes": 11900,
+          "sha256": "09ff60aca2d5c162f78eedad4807736bc61d270ad35e5521cecb09ce64a2f2ec"
+        },
+        "config/ftbquests/quests/chapters/6lact_iir_7industrial_age.snbt": {
+          "sizeBytes": 23894,
+          "sha256": "bbb012b525b57563721c899b46d664851ff3cdcbba3a40b48d144cfefacb53b3"
+        },
+        "config/ftbquests/quests/chapters/6lact_ir_primal_age.snbt": {
+          "sizeBytes": 20931,
+          "sha256": "c2e8363d2644396a44476f40c1a8b0cd60d52b4a60576899ed08b7003ca87898"
+        },
+        "config/ftbquests/quests/chapters/6lact_ivr_digital_age.snbt": {
+          "sizeBytes": 36232,
+          "sha256": "09a69906dce744e3ce84e449d67de354ddb86bea2eafad96a94e11dc884d239f"
+        },
+        "config/ftbquests/quests/chapters/act_new_universe.snbt": {
+          "sizeBytes": 11917,
+          "sha256": "464a1eaac08a08ea9e1496d205481434b1eb00a8f784ee48eb92d03596968de7"
+        },
+        "config/ftbquests/quests/chapters/blpsi_0_act_side_actr_place_holder.snbt": {
+          "sizeBytes": 705,
+          "sha256": "1465581e1ca6bae22b2bf937d1917bf9e42addd706130ed8ef66049bf594ac22"
+        },
+        "config/ftbquests/quests/chapters/informatica.snbt": {
+          "sizeBytes": 5545,
+          "sha256": "0952048d388b20c492bb9832d79e546f60a084a4e0fef6c59e53e0038a51c5f5"
+        }
+      },
+      "output": {
+        "sizeBytes": 33623,
+        "sha256": "9d7e37ff432011b47e5959bd58657080b45a887ea573c285d942316c6a4d66f3"
+      }
+    },
+    {
+      "path": "kubejs/assets/universio_quests/lang/ru_ru.json",
+      "inputs": {
+        "config/ftbquests/quests/chapter_groups.snbt": {
+          "sizeBytes": 165,
+          "sha256": "c587e3a66fc3a771a428ba954aa2a7b1cefb0340ce514a10650aa0236a3ab1ab"
+        },
+        "config/ftbquests/quests/chapters/5lsession_aavr_even_fancier_elements.snbt": {
+          "sizeBytes": 11900,
+          "sha256": "09ff60aca2d5c162f78eedad4807736bc61d270ad35e5521cecb09ce64a2f2ec"
+        },
+        "config/ftbquests/quests/chapters/6lact_iir_7industrial_age.snbt": {
+          "sizeBytes": 23894,
+          "sha256": "bbb012b525b57563721c899b46d664851ff3cdcbba3a40b48d144cfefacb53b3"
+        },
+        "config/ftbquests/quests/chapters/6lact_ir_primal_age.snbt": {
+          "sizeBytes": 20931,
+          "sha256": "c2e8363d2644396a44476f40c1a8b0cd60d52b4a60576899ed08b7003ca87898"
+        },
+        "config/ftbquests/quests/chapters/6lact_ivr_digital_age.snbt": {
+          "sizeBytes": 36232,
+          "sha256": "09a69906dce744e3ce84e449d67de354ddb86bea2eafad96a94e11dc884d239f"
+        },
+        "config/ftbquests/quests/chapters/act_new_universe.snbt": {
+          "sizeBytes": 11917,
+          "sha256": "464a1eaac08a08ea9e1496d205481434b1eb00a8f784ee48eb92d03596968de7"
+        },
+        "config/ftbquests/quests/chapters/blpsi_0_act_side_actr_place_holder.snbt": {
+          "sizeBytes": 705,
+          "sha256": "1465581e1ca6bae22b2bf937d1917bf9e42addd706130ed8ef66049bf594ac22"
+        },
+        "config/ftbquests/quests/chapters/informatica.snbt": {
+          "sizeBytes": 5545,
+          "sha256": "0952048d388b20c492bb9832d79e546f60a084a4e0fef6c59e53e0038a51c5f5"
+        }
+      },
+      "output": {
+        "sizeBytes": 42849,
+        "sha256": "e90d31f97610747efbb432bf5eeb3f955d3166d017438b34bfbfae1875f56cd1"
+      }
+    },
+    {
+      "path": "licenses/Botania-Lexicon-Russian-translation.txt",
+      "inputs": {
+        "mods/Botania-1.19.2-440-FORGE.jar": {
+          "projectId": 225643,
+          "fileId": 4557912,
+          "sizeBytes": 11569818,
+          "sha256": "cd56e89845349b9dff7a8112c4811818fab8e325c8597277059d531ddde6111f"
+        }
+      },
+      "output": {
+        "sizeBytes": 1152,
+        "sha256": "180db0b0e93653a4d7061b1add0ba4bf1d41fc7b4f3b725f7dc05f3aeae95a2d"
+      }
+    },
+    {
+      "path": "licenses/HexCasting-Russian-translation-MIT.txt",
+      "inputs": {
+        "mods/hexcasting-forge-1.19.2-0.10.3.jar": {
+          "projectId": 569849,
+          "fileId": 4166956,
+          "sizeBytes": 2906265,
+          "sha256": "51e99f9a2ff67f339227f16565b0090d090b2ed5ce503bdc042d6c3371b4c15d"
+        }
+      },
+      "output": {
+        "sizeBytes": 1325,
+        "sha256": "cd6fe7a3371a1f8c34b33d9cff80e00539c6a0ef6508e5de930a83f26acc046e"
+      }
+    },
+    {
+      "path": "patchouli_books/universutil/ru_ru/categories/asgd.json",
+      "inputs": {
+        "patchouli_books/universutil/en_us/categories/asgd.json": {
+          "sizeBytes": 123,
+          "sha256": "1e739a525efe4bc20e4e6eba8be9040792de13151eb0dfba5fe51388d74da9f1"
+        }
+      },
+      "output": {
+        "sizeBytes": 174,
+        "sha256": "f422358dfd41d9c7aa72a5c5cd9803d3b4bb2d67123e053ff702666ba44c33a9"
+      }
+    },
+    {
+      "path": "patchouli_books/universutil/ru_ru/entries/asgd/asgd.json",
+      "inputs": {
+        "patchouli_books/universutil/en_us/entries/asgd/asgd.json": {
+          "sizeBytes": 2028,
+          "sha256": "d7f4106567b34ca45b7c203ed6f1304db3e0379551ee6f2bccdb7b7adf2ba6c2"
+        }
+      },
+      "output": {
+        "sizeBytes": 2073,
+        "sha256": "8a53e885f88ad3cd5adc6a8112935d2c69d4af47b61fe465ec977fd06bbe35e0"
+      }
+    }
+  ],
+  "bookJarLocalization": [
+    {
+      "path": "mods/AdvancedPeripherals-1.19.2-0.7.29r.jar",
+      "projectId": 431725,
+      "fileId": 4617721,
+      "before": {
+        "sizeBytes": 871155,
+        "sha256": "af03e1f85e1d64c7020a1527fd4fd89f8e9faf6bed15e029d6bb61530b7d5fd4"
+      },
+      "after": {
+        "sizeBytes": 2225012,
+        "sha256": "c97a17f1ed982c0440c1786f3e137c8037cb3bb2385e51a9f38fe097afa17343"
+      },
+      "entries": [
+        {
+          "path": "LICENSE",
+          "source": "licenses/AdvancedPeripherals-Apache-2.0.txt",
+          "output": {
+            "sizeBytes": 11357,
+            "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+          }
+        },
+        {
+          "path": "NOTICE",
+          "source": "licenses/AdvancedPeripherals-NOTICE.txt",
+          "output": {
+            "sizeBytes": 390,
+            "sha256": "a2217f445a5a985760bb304644159dd98c4ba6c33f94f90b3660a45f38b6a4df"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/book.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/book.json",
+          "output": {
+            "sizeBytes": 262,
+            "sha256": "c5b0d27296c5deab302d117ced733c651d8500b8a0198d37a7ead56a9bc52202"
+          },
+          "before": {
+            "sizeBytes": 410,
+            "sha256": "77e43ab3126196001e394d999e4ebab91a94266392c75915fbe21004e838f643"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/categories/items.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/categories/items.json",
+          "output": {
+            "sizeBytes": 285,
+            "sha256": "a1c951b4497f1618f32a0e3dbae3aea79088fd0f8220283a8c90d1c73e839ade"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/categories/metaphysics.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/categories/metaphysics.json",
+          "output": {
+            "sizeBytes": 276,
+            "sha256": "5df6704128bc57671e8c3b9da087cf37083b89e9a16f316b5b1bbdf4c3eb80cf"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/categories/peripherals.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/categories/peripherals.json",
+          "output": {
+            "sizeBytes": 348,
+            "sha256": "ef172395b77ada493478cde4d1f0d87d81380c652275f0f5b389b3103ac69c90"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/items/ar_goggles.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/items/ar_goggles.json",
+          "output": {
+            "sizeBytes": 807,
+            "sha256": "c6dc4959bf9ec6df49dadda8fc83288a692c1fee2b48dcdb85811c061b22d02f"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/items/chunk_controller.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/items/chunk_controller.json",
+          "output": {
+            "sizeBytes": 692,
+            "sha256": "3a6016d3870f62bfce661a4c66ff6d017f32ea5b6d2c8872eef37b625ccfdd16"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/items/computer_tool.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/items/computer_tool.json",
+          "output": {
+            "sizeBytes": 672,
+            "sha256": "82adbbc750b26001b51d7dadb54e01d7fe6458da74be3454eaf9ce952c85e533"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/items/memory_card.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/items/memory_card.json",
+          "output": {
+            "sizeBytes": 838,
+            "sha256": "8f782fd6136f0fd2410f7a3a7c03cf977113f80f1eff3c5b2c9b098ab7d67be6"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/items/pocket_computers.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/items/pocket_computers.json",
+          "output": {
+            "sizeBytes": 1002,
+            "sha256": "113fec9e6d139fd41e3fc96e4fa68f1d0851ba4837abce2e3b17b203b5ed162d"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/metaphysics/end_automata_core.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/metaphysics/end_automata_core.json",
+          "output": {
+            "sizeBytes": 1269,
+            "sha256": "52f65050c633454302e476e7fda94f8723f85231bcc38b6f09cf0cecabc40280"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/metaphysics/fuel_consuming.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/metaphysics/fuel_consuming.json",
+          "output": {
+            "sizeBytes": 1533,
+            "sha256": "681f965470f4f83d7729ffedf2f9dc92b1cd527624a3cfd31b281fcda1bb14ad"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/metaphysics/husbandry_automata_core.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/metaphysics/husbandry_automata_core.json",
+          "output": {
+            "sizeBytes": 1202,
+            "sha256": "37de7ced7f19c0039434a4433270a1e819dd345075f4b2d036ac7816fbbf35d3"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/metaphysics/intro.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/metaphysics/intro.json",
+          "output": {
+            "sizeBytes": 567,
+            "sha256": "8163dfdee037bd3ede9a32585a57e732fe8a44f2abdd0fb3aff6f2286010f4a5"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/metaphysics/overpowered_automata_core.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/metaphysics/overpowered_automata_core.json",
+          "output": {
+            "sizeBytes": 1467,
+            "sha256": "ffc3dae2e0eef1637feda7a20cb3703b18c1b52f1e478e3256e20aa15aefac7f"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/metaphysics/weak_automata_core.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/metaphysics/weak_automata_core.json",
+          "output": {
+            "sizeBytes": 1722,
+            "sha256": "3e0c440ae96a01a9542c4ecbdcd1577163c929505ad4d4fc1313d870214bce32"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/ar_controller.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/ar_controller.json",
+          "output": {
+            "sizeBytes": 1118,
+            "sha256": "2e92b5b19a02efee512575bce8fc1332e52656192c6cda040a3b2c5c487c89ac"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/block_reader.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/block_reader.json",
+          "output": {
+            "sizeBytes": 1012,
+            "sha256": "84e517b53fef070c647a9290835deed01ec834b2c1c725d050554449f6bc208c"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/chat_box.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/chat_box.json",
+          "output": {
+            "sizeBytes": 1028,
+            "sha256": "f1e2d03e6618fd625ed13c852b2eab3750c03c99800b19d376a6144d97e3490a"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/colony_integrator.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/colony_integrator.json",
+          "output": {
+            "sizeBytes": 991,
+            "sha256": "a6c89a9997125be238a440d432dd9074d1b23295c96eeeb662c11eeb7f712ceb"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/energy_detector.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/energy_detector.json",
+          "output": {
+            "sizeBytes": 1047,
+            "sha256": "d06bb3483aa91a819920bd6a34fd3a8a59c63f08aa88d2823758d24fc1eb7d1b"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/environment_detector.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/environment_detector.json",
+          "output": {
+            "sizeBytes": 1035,
+            "sha256": "3226c7996470ffccca67af64b64b206c8befbfaa0c0bedc09697eea6ec4cb700"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/geo_scanner.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/geo_scanner.json",
+          "output": {
+            "sizeBytes": 1016,
+            "sha256": "0dbbd7c6d09534771c59498a39b32011b70b24a9bc25c489dee7cc4b7ad17f8c"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/inventory_manager.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/inventory_manager.json",
+          "output": {
+            "sizeBytes": 1112,
+            "sha256": "440cb2df8dac61ade1e8dd5eddcf4a2338e732f4c2b1d2fe80a664581b9b67d2"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/me_bridge.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/me_bridge.json",
+          "output": {
+            "sizeBytes": 1062,
+            "sha256": "5e4425e3b5142b11182d07160bffa4b458186f0efab85fbac0a2358cbdc67f7e"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/nbt_storage.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/nbt_storage.json",
+          "output": {
+            "sizeBytes": 1018,
+            "sha256": "5109d195aa458f15cee038f18f46300d51ea7aeb6c77dc6be8bc393849c2a617"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/player_detector.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/player_detector.json",
+          "output": {
+            "sizeBytes": 1010,
+            "sha256": "e985bfefbe03f9b1e851edd87e1782946dbb69c69535b02b393cb7d13bf5f4b1"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/redstone_integrator.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/redstone_integrator.json",
+          "output": {
+            "sizeBytes": 1202,
+            "sha256": "9734223f087e01d009ee186aec4b9fd7f18cb4576986e24ffaf9c4d34cee7132"
+          }
+        },
+        {
+          "path": "data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/rs_bridge.json",
+          "source": "tools/book-localization/data/advancedperipherals/patchouli_books/manual/ru_ru/entries/peripherals/rs_bridge.json",
+          "output": {
+            "sizeBytes": 1009,
+            "sha256": "8ab4e491cba7ec9c85b82de09dec8b94696d94f66f0b7903dbe0e3c5d8428c67"
+          }
+        }
+      ]
+    },
+    {
+      "path": "mods/squirtgun-1.19.2-1.1.1.jar",
+      "projectId": 716274,
+      "fileId": 4256080,
+      "before": {
+        "sizeBytes": 565024,
+        "sha256": "9b5ecde9e7595f79380d056484429ab3b1e9602588194650dcad85e747e08e1d"
+      },
+      "after": {
+        "sizeBytes": 1001460,
+        "sha256": "cd30250e75c5f429a51d938707f70c1a0570c42b4b445d835df2680a02caa8cb"
+      },
+      "entries": [
+        {
+          "path": "LICENSE",
+          "source": "licenses/Squirtgun-GPL-2.0.txt",
+          "output": {
+            "sizeBytes": 18092,
+            "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+          }
+        },
+        {
+          "path": "NOTICE",
+          "source": "licenses/Squirtgun-NOTICE.txt",
+          "output": {
+            "sizeBytes": 1090,
+            "sha256": "23aa73df4f2126509e152a6a1dc7dee2032187af55f3f78f97df5b866e9f2508"
+          }
+        },
+        {
+          "path": "data/squirtgun/patchouli_books/gun_manual/book.json",
+          "source": "tools/book-localization/data/squirtgun/patchouli_books/gun_manual/book.json",
+          "output": {
+            "sizeBytes": 158,
+            "sha256": "347e3f8afa571a38ffe6de43e328d5ce392693961854238549d09dc5e36b33ca"
+          },
+          "before": {
+            "sizeBytes": 121,
+            "sha256": "bff602912262c27dfb83441980ae462c10d0a722f5cc0c625dee0542fa92df55"
+          }
+        },
+        {
+          "path": "data/squirtgun/patchouli_books/gun_manual/ru_ru/categories/encapsulator.json",
+          "source": "tools/book-localization/data/squirtgun/patchouli_books/gun_manual/ru_ru/categories/encapsulator.json",
+          "output": {
+            "sizeBytes": 215,
+            "sha256": "cef6322ca1231907397c18360911cf650be937b83416cdcc44b230ec8dd610d1"
+          }
+        },
+        {
+          "path": "data/squirtgun/patchouli_books/gun_manual/ru_ru/categories/gun.json",
+          "source": "tools/book-localization/data/squirtgun/patchouli_books/gun_manual/ru_ru/categories/gun.json",
+          "output": {
+            "sizeBytes": 219,
+            "sha256": "00f2c1596b3b93218405f0e957441ee6f0435f001949abb2f9f747488dedbc0d"
+          }
+        },
+        {
+          "path": "data/squirtgun/patchouli_books/gun_manual/ru_ru/categories/phials.json",
+          "source": "tools/book-localization/data/squirtgun/patchouli_books/gun_manual/ru_ru/categories/phials.json",
+          "output": {
+            "sizeBytes": 161,
+            "sha256": "e4c1f92d5d859a063fb52254b2741f8af24a979f2c90e97c17bfcef1b781afa7"
+          }
+        },
+        {
+          "path": "data/squirtgun/patchouli_books/gun_manual/ru_ru/entries/encapsulator.json",
+          "source": "tools/book-localization/data/squirtgun/patchouli_books/gun_manual/ru_ru/entries/encapsulator.json",
+          "output": {
+            "sizeBytes": 587,
+            "sha256": "6fee1566d62721b7dda3bc9248600c82c6847031b23906b8139b8f1ae406016a"
+          }
+        },
+        {
+          "path": "data/squirtgun/patchouli_books/gun_manual/ru_ru/entries/encapsulator_use.json",
+          "source": "tools/book-localization/data/squirtgun/patchouli_books/gun_manual/ru_ru/entries/encapsulator_use.json",
+          "output": {
+            "sizeBytes": 832,
+            "sha256": "c06d44ffbc6334bbaa858d2b7b55501cf81fe0f9f6f3544e756dbb0a61b4dba7"
+          }
+        },
+        {
+          "path": "data/squirtgun/patchouli_books/gun_manual/ru_ru/entries/gun.json",
+          "source": "tools/book-localization/data/squirtgun/patchouli_books/gun_manual/ru_ru/entries/gun.json",
+          "output": {
+            "sizeBytes": 759,
+            "sha256": "cbef6206120d072da53cdb4da5e6a3561766aa20f7abb7c10227f8ca61afcb6a"
+          }
+        },
+        {
+          "path": "data/squirtgun/patchouli_books/gun_manual/ru_ru/entries/hud.json",
+          "source": "tools/book-localization/data/squirtgun/patchouli_books/gun_manual/ru_ru/entries/hud.json",
+          "output": {
+            "sizeBytes": 475,
+            "sha256": "26e603683b7696b3d949dfa9d81fa977239a9562d48df078cdc6292019c334c6"
+          }
+        },
+        {
+          "path": "data/squirtgun/patchouli_books/gun_manual/ru_ru/entries/loading.json",
+          "source": "tools/book-localization/data/squirtgun/patchouli_books/gun_manual/ru_ru/entries/loading.json",
+          "output": {
+            "sizeBytes": 570,
+            "sha256": "fc1cac2dc4bd69778c94df624cfffa9a166a1e5cfe0901a86ba40dda82c34a82"
+          }
+        },
+        {
+          "path": "data/squirtgun/patchouli_books/gun_manual/ru_ru/entries/phial.json",
+          "source": "tools/book-localization/data/squirtgun/patchouli_books/gun_manual/ru_ru/entries/phial.json",
+          "output": {
+            "sizeBytes": 511,
+            "sha256": "fc49b64e4a39ee42ada466d257252af5b89b1b8da10212a8537205acd652b281"
+          }
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,27 @@
+{
+  "name": "Ядро автомата: слабое",
+  "icon": "advancedperipherals:weak_automata_core",
+  "category": "advancedperipherals:metaphysics",
+  "pages": [
+    {
+      "type": "spotlight",
+      "title": "Ядро автомата: слабое",
+      "item": "advancedperipherals:weak_automata_core",
+      "text": "Слабое ядро превращает черепашку в мощный автомат."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:weak_automata_core"
+    },
+    {
+      "type": "link",
+      "text": "Черепашка получает новые возможности:$(li)Добывать блоки инструментом.$(li)Щёлкать по блоку предметом или пустой рукой.$(li)Подбирать все или отдельные предметы рядом.$(li)Обнаруживать предметы поблизости.$(li)Находить блоки и черепашек в поле зрения.$(li)Заряжаться от предмета с RF в инвентаре.",
+      "url": "https://docs.intelligence-modding.de/metaphysics/weak_automata/",
+      "link_text": "Документация API"
+    },
+    {
+      "type": "text",
+      "text": "Слабое ядро — лишь начало исследований. Эта заготовка может впитывать осколки душ существ. Попробуйте накормить её разными существами, чтобы получить другие ядра.$(li)$(l:metaphysics/end_automata_core)Ядро Края$(li)$(l:metaphysics/husbandry_automata_core)Ядро земледелия"
+    }
+  ]
+}

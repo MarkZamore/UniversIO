@@ -1,0 +1,20 @@
+{
+  "name": "Ядро автомата: Край",
+  "icon": "advancedperipherals:end_automata_core",
+  "category": "advancedperipherals:metaphysics",
+  "advancement": "advancedperipherals:weak_automata_core",
+  "pages": [
+    {
+      "type": "spotlight",
+      "title": "Ядро автомата: Край",
+      "item": "advancedperipherals:end_automata_core",
+      "text": "Поглотив 10 странников Края, слабое ядро превратится в ядро Края.$(p)Оно мощнее слабого ядра. Похоже, эта душа ещё и позволяет черепашке телепортироваться с некоторыми ограничениями."
+    },
+    {
+      "type": "link",
+      "text": "Помимо возможностей слабого ядра, эта душа позволяет телепортироваться в пределах измерения. Похоже, сначала нужно сохранить точки назначения.$(p)Если сломать черепашку, сохранённые точки пропадут.",
+      "url": "https://docs.intelligence-modding.de/metaphysics/end_automata/",
+      "link_text": "Документация API"
+    }
+  ]
+}

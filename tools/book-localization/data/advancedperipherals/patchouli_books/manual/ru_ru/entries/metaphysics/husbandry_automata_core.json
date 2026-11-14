@@ -1,0 +1,20 @@
+{
+  "name": "Ядро автомата: земледелие",
+  "icon": "advancedperipherals:husbandry_automata_core",
+  "category": "advancedperipherals:metaphysics",
+  "advancement": "advancedperipherals:weak_automata_core",
+  "pages": [
+    {
+      "type": "spotlight",
+      "title": "Ядро автомата: земледелие",
+      "item": "advancedperipherals:husbandry_automata_core",
+      "text": "Поглотив 3 куриц, 3 коров и 3 овец, слабое ядро превратится в ядро земледелия.$(p)Оно мощнее слабого ядра и позволяет взаимодействовать с животными."
+    },
+    {
+      "type": "link",
+      "text": "Помимо возможностей слабого ядра, эта версия позволяет взаимодействовать с животными и даже помещать их внутрь черепашки.$(p)Если сломать черепашку, животные внутри пропадут.",
+      "url": "https://docs.intelligence-modding.de/metaphysics/husbandry_automata/",
+      "link_text": "Документация API"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+Advanced Peripherals
+By Srendi and contributors.
+Source: https://github.com/IntelligenceModding/AdvancedPeripherals/tree/1.19.2-0.7.29r
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Modified for UniversIO by the LANMinecraft project.
+This build adds Russian Patchouli manual pages and uses a translation key
+for the manual's introductory text. The mod's code is unchanged.

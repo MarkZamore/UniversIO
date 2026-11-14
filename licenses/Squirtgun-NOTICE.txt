@@ -1,0 +1,18 @@
+Squirtgun 1.19.2-1.1.1 by Dirt Engineers (2022).
+The author distributes this release under the GNU General Public License,
+version 2 (see LICENSE).
+Official file: https://www.curseforge.com/minecraft/mc-mods/squirt-gun/files/4256080
+Complete upstream source and build files:
+https://github.com/DirtEngineers/Squirtgun/archive/0c182188cca02a1741e9e84105253465db857d39.tar.gz
+The original release code and English book spelling are in commit
+313f0879f0330e999d2474ed8bdeea1b577b13ba in the same repository.
+
+2026-11-14, modified by the LANMinecraft project for UniversIO.
+The changes add Russian Patchouli pages and change the manual's book.json to
+reference localized title and landing-page strings. Game code is unchanged.
+The source for these changes is provided under GPL version 2 in the UniversIO
+repository, at the commit recorded in the release's pack-manifest.json:
+https://github.com/MarkZamore/UniversIO
+See tools/book-localization/data/squirtgun, kubejs/assets/squirtgun/lang,
+tools/overlay.json, and the build transformation in LANMinecraft
+tools/PackData/CurseForge/prepare.py.

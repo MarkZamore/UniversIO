@@ -1,0 +1,17 @@
+{
+  "name": "Установка для наполнения флаконов",
+  "icon": "squirtgun:encapsulator_block",
+  "category": "squirtgun:encapsulator",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Соберите установку на верстаке и наполните флаконы. Пригодятся для стрельбы по мишеням!"
+    },
+    {
+      "type": "crafting",
+      "recipe": "minecraft:encapsulator_block",
+      "text": "Пустыми флаконами стрелять не получится."
+    }
+  ]
+}

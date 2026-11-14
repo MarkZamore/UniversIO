@@ -1,0 +1,30 @@
+{
+  "name": "Контроллер доп. реальности",
+  "icon": "advancedperipherals:ar_controller",
+  "category": "advancedperipherals:peripherals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Контроллер управляет очками доп. реальности по беспроводной связи. На интерфейсе очков можно рисовать всё что угодно. Изображение видно, пока очки надеты.$(p)Подробности есть на $(9)$(l:https://docs.intelligence-modding.de/peripherals/ar_controller/)официальной вики$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:ar_controller"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "0": "computercraft:computer_advanced",
+          "P": "advancedperipherals:ar_controller"
+        },
+        "pattern": [
+          [
+            "0P"
+          ]
+        ]
+      },
+      "text": "Подключите контроллер к компьютеру."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Чат-коробка",
+  "icon": "advancedperipherals:chat_box",
+  "category": "advancedperipherals:peripherals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Чат-коробка отправляет и получает сообщения игрового чата.$(p)Чтобы сообщение было видно только чат-коробке, начните его со знака `$`.$(p)Подробности есть на $(9)$(l:https://docs.intelligence-modding.de/peripherals/chat_box/)официальной вики$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:chat_box"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "0": "computercraft:computer_advanced",
+          "P": "advancedperipherals:chat_box"
+        },
+        "pattern": [
+          [
+            "0P"
+          ]
+        ]
+      },
+      "text": "Подключите чат-коробку к компьютеру."
+    }
+  ]
+}

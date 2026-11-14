@@ -1,0 +1,15 @@
+{
+  "name": "Контроллер чанков",
+  "icon": "advancedperipherals:chunk_controller",
+  "category": "advancedperipherals:items",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Эта деталь нужна для создания черепашки, которая держит чанки загруженными.$(p)Соедините её с обычной или продвинутой черепашкой.$(p)Подробности есть на $(9)$(l:https://docs.intelligence-modding.de/items/chunk_controller/)официальной вики$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:chunk_controller"
+    }
+  ]
+}

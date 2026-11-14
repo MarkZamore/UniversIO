@@ -1,0 +1,30 @@
+{
+  "name": "RS-мост",
+  "icon": "advancedperipherals:rs_bridge",
+  "category": "advancedperipherals:peripherals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "RS-мост подключается к Refined Storage. Он умеет извлекать и создавать предметы, получать список содержимого и выполнять другие операции.$(p)Подробности есть на $(9)$(l:https://docs.intelligence-modding.de/peripherals/rs_bridge/)официальной вики$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:rs_bridge"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "0": "computercraft:computer_advanced",
+          "P": "advancedperipherals:rs_bridge"
+        },
+        "pattern": [
+          [
+            "0P"
+          ]
+        ]
+      },
+      "text": "Подключите RS-мост к компьютеру."
+    }
+  ]
+}

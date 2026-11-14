@@ -1,0 +1,1034 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "square"
+	filename: "6lact_ir_primal_age"
+	group: "25B206503DC670D5"
+	icon: "minecraft:oak_log"
+	id: "54DF064974573157"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["18E944E32347E641"]
+			description: ["{lanminecraft.universio.quests.6lact_ir_primal_age.af2ccb58b311}"]
+			hide: true
+			icon: "universutil:mark"
+			id: "765EF68FE8BCEA99"
+			rewards: [
+				{
+					auto: "invisible"
+					command: "/thitemstages add @p primal_age true"
+					id: "08725FF5E84186E6"
+					type: "command"
+				}
+				{
+					auto: "invisible"
+					command: "/title @p title \"Primal Age Unlocked!\""
+					id: "361CA2D1E8AEC2AA"
+					type: "command"
+				}
+				{
+					auto: "invisible"
+					command: "/execute as @p at @s run summon firework_rocket ~5 ~ ~5 {LifeTime:15,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Flight:5,Explosions:[{Type:4,Flicker:0,Trail:1,Colors:[I;11140864],FadeColors:[I;16777215]}]}}}}"
+					id: "143BCC91FB532C4D"
+					type: "command"
+				}
+				{
+					auto: "invisible"
+					command: "/execute as @p at @s run summon firework_rocket ~-5 ~ ~5 {LifeTime:15,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Flight:5,Explosions:[{Type:4,Flicker:0,Trail:1,Colors:[I;11140864],FadeColors:[I;16777215]}]}}}}"
+					id: "225C5F7FF50F6BBF"
+					type: "command"
+				}
+				{
+					auto: "invisible"
+					command: "/execute as @p at @s run summon firework_rocket ~5 ~ ~-5 {LifeTime:15,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Flight:5,Explosions:[{Type:4,Flicker:0,Trail:1,Colors:[I;11140864],FadeColors:[I;16777215]}]}}}}"
+					id: "560E559FAE016133"
+					type: "command"
+				}
+				{
+					auto: "invisible"
+					command: "/execute as @p at @s run summon firework_rocket ~-5 ~ ~-5 {LifeTime:15,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Flight:5,Explosions:[{Type:4,Flicker:0,Trail:1,Colors:[I;11140864],FadeColors:[I;16777215]}]}}}}"
+					id: "029F262EFE908CA3"
+					type: "command"
+				}
+			]
+			shape: "rsquare"
+			size: 2.0d
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.d513c9b0b5a5}"
+			tasks: [{
+				id: "009D5EF5ABE6AD34"
+				title: "{lanminecraft.universio.quests.6lact_ir_primal_age.3421d0f1886b}"
+				type: "checkmark"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.e2675b4df548}"
+			x: -7.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["37664D5C496A6EFF"]
+			hide: true
+			id: "4424345D37B51536"
+			rewards: [{
+				id: "27BF40A4CB342180"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.75e76f98f331}"
+			tasks: [{
+				id: "771A31D54F52B4FA"
+				item: "minecraft:stick"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.16fff8006257}"
+			x: -10.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["765EF68FE8BCEA99"]
+			hide: true
+			hide_dependency_lines: true
+			id: "40EF3C29325982DC"
+			rewards: [{
+				id: "10428B813F54BF99"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.0daca9afae14}"
+			tasks: [{
+				id: "4F9463F2C055A6BB"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "minecraft:overworld_natural_logs"
+					}
+				}
+				title: "{lanminecraft.universio.quests.6lact_ir_primal_age.1ee7f1b4f3a8}"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.a84d3d8fce43}"
+			x: -10.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["40EF3C29325982DC"]
+			hide: true
+			id: "37664D5C496A6EFF"
+			rewards: [{
+				id: "295DCA35DA2F9D04"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.3c338b5e8fe2}"
+			tasks: [{
+				id: "5AED60DC03003FD0"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "minecraft:planks"
+					}
+				}
+				title: "{lanminecraft.universio.quests.6lact_ir_primal_age.68fd4d99bd17}"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.955e97dc2f06}"
+			x: -8.5d
+			y: -6.5d
+		}
+		{
+			dependencies: ["765EF68FE8BCEA99"]
+			hide: true
+			hide_dependency_lines: true
+			id: "7AC9FC5D2A254AC7"
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.aa3be23685df}"
+			tasks: [{
+				id: "6F8F6260346AAF3E"
+				item: "minecraft:cobblestone"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.e120954e18f4}"
+			x: -7.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["74D3ADA1DC501A22"]
+			hide: true
+			id: "34B4F80393705EEC"
+			rewards: [{
+				id: "11A5C8CD39379D9F"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.fcf5dac3d5c8}"
+			tasks: [{
+				id: "67BE3C1920549E59"
+				item: "woodenhopper:wooden_hopper"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.1dfad92294e9}"
+			x: -4.0d
+			y: -6.5d
+		}
+		{
+			dependencies: [
+				"34B4F80393705EEC"
+				"0F3F06C515FB56E7"
+			]
+			hide: true
+			hide_dependency_lines: false
+			id: "0F4357057006D1D5"
+			rewards: [{
+				id: "1F205D1C039F3823"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.9419508daf41}"
+			tasks: [{
+				id: "031D30E258831AD3"
+				item: "brickhopper:brick_hopper"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.30e6c9331614}"
+			x: -4.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["5E495AB9912921E3"]
+			hide: true
+			id: "0F3F06C515FB56E7"
+			rewards: [{
+				id: "6F0582CC1CB7ECC3"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.bfde69ef224f}"
+			tasks: [{
+				id: "6D2241CFFD51848D"
+				item: "minecraft:brick"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.41798dacb8d1}"
+			x: -5.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["4424345D37B51536"]
+			hide: true
+			id: "70CE2F0693C244A7"
+			rewards: [{
+				id: "3C7911B0A009269F"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.6ea33642a8e7}"
+			tasks: [{
+				id: "5996B4D3BB61C2B1"
+				item: {
+					Count: 1
+					id: "firesticks:fire_stick"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.b9b1e0d1530b}"
+			x: -10.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["37664D5C496A6EFF"]
+			hide: true
+			id: "74D3ADA1DC501A22"
+			rewards: [{
+				id: "2F985DE21A7F310D"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.bbc982945a12}"
+			tasks: [{
+				id: "16841067854DA169"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:chests/wooden"
+					}
+				}
+				title: "{lanminecraft.universio.quests.6lact_ir_primal_age.3685db0b56ec}"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.8537fdc09534}"
+			x: -5.5d
+			y: -6.5d
+		}
+		{
+			dependencies: ["74D3ADA1DC501A22"]
+			hide: true
+			id: "61BC4C1BE3128172"
+			rewards: [{
+				id: "6730C9B904D602C7"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.d648495f03fa}"
+			tasks: [{
+				id: "084EE71973931947"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "storagedrawers:drawers"
+					}
+				}
+				title: "{lanminecraft.universio.quests.6lact_ir_primal_age.957880c3d75d}"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.92be5d5dfb37}"
+			x: -4.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["0F3F06C515FB56E7"]
+			hide: true
+			id: "5D52FD0E7872C133"
+			rewards: [{
+				id: "609EAD2F2FADD390"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.f318fa4b10cb}"
+			tasks: [{
+				id: "158072CF7F3C6535"
+				item: "botanypots:terracotta_botany_pot"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.722b2c3de764}"
+			x: -5.5d
+			y: -3.5d
+		}
+		{
+			dependencies: [
+				"7520F0F6FA1E5FC8"
+				"39DA5A4B4BD54BBC"
+			]
+			hide: true
+			id: "1D52C18380E5ADC3"
+			rewards: [{
+				id: "5308848076BCC5F2"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.2db29453ec1c}"
+			tasks: [{
+				id: "60BB8983B7C30E51"
+				item: "botania:runic_altar"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.582ca63170be}"
+			x: -4.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["7520F0F6FA1E5FC8"]
+			hide: true
+			id: "453B9B9BA8A83F0E"
+			rewards: [{
+				id: "799C06B246340F19"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.448b5e473ac7}"
+			tasks: [{
+				id: "6B7E5776DB00E643"
+				item: "botania:mana_pool"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.75d38d063620}"
+			x: -5.5d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"7AC9FC5D2A254AC7"
+				"4B2443FEEBB03F6E"
+			]
+			hide: true
+			id: "08BA2E4EDF2AAB87"
+			rewards: [{
+				id: "7E5167CCB75E0239"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.02068bd37aaf}"
+			tasks: [{
+				id: "30385D3B2117CABD"
+				item: "botania:apothecary_default"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.0886c6ded900}"
+			x: -8.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["08BA2E4EDF2AAB87"]
+			hide: true
+			id: "3D076BED45F31560"
+			rewards: [{
+				id: "75BE49FBE4B87A61"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.737c88fbd14c}"
+			tasks: [{
+				id: "2987350C6565F901"
+				item: "botania:pure_daisy"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.f62aece4f53d}"
+			x: -7.0d
+			y: -0.5d
+		}
+		{
+			dependencies: [
+				"7AC9FC5D2A254AC7"
+				"3D076BED45F31560"
+				"48A8D09441C94E62"
+			]
+			hide: true
+			id: "7520F0F6FA1E5FC8"
+			rewards: [{
+				id: "661EFC950F03C5E0"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "6F90A2763E8BF9E5"
+				item: "botania:livingrock"
+				type: "item"
+			}]
+			x: -5.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["453B9B9BA8A83F0E"]
+			description: [
+				"{lanminecraft.universio.quests.6lact_ir_primal_age.5c4a16ee0e5c}"
+				"{lanminecraft.universio.quests.6lact_ir_primal_age.1f7b94fd988b}"
+				"{lanminecraft.universio.quests.6lact_ir_primal_age.77042860c4a8}"
+			]
+			hide: true
+			id: "39DA5A4B4BD54BBC"
+			rewards: [
+				{
+					count: 5
+					id: "6299325C7E1042FA"
+					item: "botania:blacker_lotus"
+					type: "item"
+				}
+				{
+					id: "6BE811B73C7A82A5"
+					item: {
+						Count: 1
+						id: "numismaticoverhaul:silver_coin"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.043757464aaa}"
+			tasks: [{
+				id: "5CEBF3F174BB12AA"
+				item: "botania:mana_powder"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.ada5f50b3c1f}"
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["765EF68FE8BCEA99"]
+			description: ["{lanminecraft.universio.quests.6lact_ir_primal_age.f516e3d28b33}"]
+			hide: true
+			hide_dependency_lines: true
+			id: "5E495AB9912921E3"
+			rewards: [{
+				id: "3A118F941FCF4313"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.0b0219f7b99a}"
+			tasks: [{
+				id: "6F6AF114B52560DC"
+				item: "minecraft:clay_ball"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.1a6b2db70bb7}"
+			x: -7.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["1D52C18380E5ADC3"]
+			hide: true
+			id: "1DEA7A1C2858E2C2"
+			rewards: [{
+				count: 5
+				id: "4E52340005274BE5"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.28145c6bd61f}"
+			tasks: [{
+				id: "00C3CB482A6E3EAB"
+				item: "botania:rune_water"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.0e30fe4f4c7d}"
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1D52C18380E5ADC3"]
+			hide: true
+			id: "30B5920C7BDF5875"
+			rewards: [{
+				count: 5
+				id: "2CA774A2B1E102EA"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.cbb494359c6e}"
+			tasks: [{
+				id: "4AF0C7F6B64924C4"
+				item: "botania:rune_fire"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.7d2c6d6ab5e4}"
+			x: -1.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["1D52C18380E5ADC3"]
+			hide: true
+			id: "0D0760DFA09D3FD5"
+			rewards: [{
+				count: 5
+				id: "4C540E6D869296ED"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.d8af6cedb6eb}"
+			tasks: [{
+				id: "4C9CAD0F4075C2BA"
+				item: "botania:rune_earth"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.fb77e416408a}"
+			x: -1.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["1D52C18380E5ADC3"]
+			hide: true
+			id: "026F7A6202A80BA1"
+			rewards: [{
+				count: 5
+				id: "15AC7E16D15A438C"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.1591fb0a8f71}"
+			tasks: [{
+				id: "499A81CBEBB4EF7B"
+				item: "botania:rune_air"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.3277ad51211c}"
+			x: -1.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1D52C18380E5ADC3"]
+			hide: true
+			id: "1969A7689F5E0112"
+			rewards: [{
+				count: 5
+				id: "47CE2824CD090462"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.a1cab30b5dbf}"
+			tasks: [{
+				id: "25CA801CAAC515CF"
+				item: "botania:rune_mana"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.d84965799610}"
+			x: -1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["765EF68FE8BCEA99"]
+			hide: true
+			hide_dependency_lines: true
+			id: "4B2443FEEBB03F6E"
+			rewards: [
+				{
+					id: "426D477CFA8BAE25"
+					item: "botania:lexicon"
+					type: "item"
+				}
+				{
+					id: "5045782637ABF039"
+					item: {
+						Count: 1
+						id: "numismaticoverhaul:silver_coin"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.5efe015c8601}"
+			tasks: [{
+				id: "76DE979B460615F1"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "botania:petals"
+					}
+				}
+				title: "{lanminecraft.universio.quests.6lact_ir_primal_age.9e3bba955a31}"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.e04c91ef5674}"
+			x: -10.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["52641C5264E10932"]
+			hide: true
+			id: "23DF90E2FD9CB2C7"
+			rewards: [{
+				id: "019E6D06B5BD0EAD"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.81bba6a25ff7}"
+			tasks: [{
+				id: "785A24C3A65A55A7"
+				item: "minecraft:composter"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.006f8db782df}"
+			x: -8.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["37664D5C496A6EFF"]
+			hide: true
+			id: "52641C5264E10932"
+			rewards: [{
+				id: "2DFA1EAAE3E884F4"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.cd8b385c5704}"
+			tasks: [{
+				id: "2D484A3AA3065A9E"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "minecraft:wooden_slabs"
+					}
+				}
+				title: "{lanminecraft.universio.quests.6lact_ir_primal_age.1db3e6dc0208}"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.0999debd9929}"
+			x: -8.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["23DF90E2FD9CB2C7"]
+			hide: true
+			id: "1FD50D8B12C7A91B"
+			rewards: [{
+				id: "3FA61D36D84B1C77"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.6d5113af7609}"
+			tasks: [{
+				id: "6CE9E3FCCFEABC55"
+				item: "minecraft:bone_meal"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.97a72147431b}"
+			x: -10.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["5E495AB9912921E3"]
+			hide: true
+			id: "4B52270BCD69E9A5"
+			rewards: [{
+				id: "269E21FB3D7695FF"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.ea475e96e256}"
+			tasks: [
+				{
+					count: 2L
+					id: "31A1133926F54BB5"
+					item: "ceramicshears:clay_shears_part"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "5A158C65CD165A46"
+					item: "ceramicshears:ceramic_shears_part"
+					type: "item"
+				}
+				{
+					id: "75EF7CA130AC5B59"
+					item: {
+						Count: 1
+						id: "ceramicshears:ceramic_shears"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.8a986788761a}"
+			x: -7.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["08BA2E4EDF2AAB87"]
+			id: "118C11A48BEFCA6D"
+			rewards: [{
+				id: "590CF140384E3C11"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.fe7975720edf}"
+			tasks: [{
+				id: "60C240F600A3A268"
+				item: "botania:endoflame"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.c95e3e88d74f}"
+			x: -10.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["3D076BED45F31560"]
+			hide: true
+			id: "20951D16B1F86418"
+			rewards: [{
+				id: "6D08F70A3B04CC8F"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.810aa480035f}"
+			tasks: [{
+				id: "6F4219DA91FEAB58"
+				item: "botania:livingwood"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.672fbb2ece04}"
+			x: -8.5d
+			y: -0.5d
+		}
+		{
+			dependencies: [
+				"0D0760DFA09D3FD5"
+				"30B5920C7BDF5875"
+				"026F7A6202A80BA1"
+				"1DEA7A1C2858E2C2"
+				"1969A7689F5E0112"
+			]
+			description: ["{lanminecraft.universio.quests.6lact_ir_primal_age.f0201fd1ce62}"]
+			hide: true
+			id: "5D6383A052BF82E6"
+			rewards: [{
+				count: 2
+				id: "32E0F9255841E929"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:gold_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			size: 2.0d
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.a8f0fa68426b}"
+			tasks: [{
+				id: "7568743BDB574FC9"
+				item: "reactive:scroll"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.8ec911e87e52}"
+			x: 1.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["453B9B9BA8A83F0E"]
+			hide: true
+			id: "435ADB645E13634F"
+			rewards: [{
+				id: "5C58CF899A572942"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.d4095ecfae2c}"
+			tasks: [{
+				id: "0CA17DBA6F09B232"
+				item: "minecraft:cauldron"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.4497cd0802a2}"
+			x: -5.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["20951D16B1F86418"]
+			hide: true
+			id: "1F0E659398EAB011"
+			rewards: [{
+				id: "25F0B1A193E7801D"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.84f6373073d8}"
+			tasks: [{
+				id: "069AD0C92FC64725"
+				item: "botania:mana_spreader"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.29e3742f0cb9}"
+			x: -8.5d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"40EF3C29325982DC"
+				"4424345D37B51536"
+			]
+			id: "728FB91508D6FA69"
+			rewards: [{
+				id: "68C050F0FA7CADD8"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.cfceaaa0feec}"
+			tasks: [{
+				id: "63068515E4BBB82D"
+				item: "minecraft:campfire"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.56864ed13798}"
+			x: -11.5d
+			y: -6.5d
+		}
+		{
+			dependencies: [
+				"5D52FD0E7872C133"
+				"0F4357057006D1D5"
+			]
+			hide: true
+			id: "4060D9A3163E1C94"
+			rewards: [{
+				id: "3786FBC4E805BCA1"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.d207133b7ce9}"
+			tasks: [{
+				id: "6102B318DCAAD210"
+				item: "botanypots:terracotta_hopper_botany_pot"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.6eb8828fe8a9}"
+			x: -4.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["7AC9FC5D2A254AC7"]
+			hide: true
+			id: "41BC7911BE43B416"
+			rewards: [{
+				id: "24B216F01EFEFE76"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.97c7b2899890}"
+			tasks: [{
+				id: "745EB0D566C201DB"
+				type: "checkmark"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.cb390ef29896}"
+			x: -5.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["41BC7911BE43B416"]
+			hide: true
+			id: "48A8D09441C94E62"
+			rewards: [{
+				id: "7A630B0D0E4856C6"
+				item: {
+					Count: 1
+					id: "numismaticoverhaul:silver_coin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "{lanminecraft.universio.quests.6lact_ir_primal_age.d892fa72fe15}"
+			tasks: [{
+				id: "2D17F83185D411A7"
+				item: "minecraft:smooth_stone"
+				type: "item"
+			}]
+			title: "{lanminecraft.universio.quests.6lact_ir_primal_age.a9c121025ab1}"
+			x: -4.0d
+			y: -2.0d
+		}
+	]
+	title: "{lanminecraft.universio.quests.6lact_ir_primal_age.acf2e46913d3}"
+}

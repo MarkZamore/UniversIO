@@ -1,0 +1,12 @@
+{
+  "name": "Индикатор боеприпасов",
+  "icon": "squirtgun:squirtgunitem",
+  "category": "squirtgun:gun",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Клавиша «$(k:squirtgun.gun_display_ammo_status)» переключает режим индикатора. Его можно показывать постоянно, скрыть или настроить исчезновение через 10 секунд."
+    }
+  ]
+}

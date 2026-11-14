@@ -1,0 +1,30 @@
+{
+  "name": "Диспетчер инвентаря",
+  "icon": "advancedperipherals:inventory_manager",
+  "category": "advancedperipherals:peripherals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Диспетчер взаимодействует с инвентарём игрока. Возьмите карту памяти, нажмите правую кнопку мыши и вставьте привязанную карту в диспетчер.$(p)Подробности есть на $(9)$(l:https://docs.intelligence-modding.de/peripherals/inventory_manager/)официальной вики$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:inventory_manager"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "0": "computercraft:computer_advanced",
+          "P": "advancedperipherals:inventory_manager"
+        },
+        "pattern": [
+          [
+            "0P"
+          ]
+        ]
+      },
+      "text": "Подключите диспетчер инвентаря к компьютеру."
+    }
+  ]
+}

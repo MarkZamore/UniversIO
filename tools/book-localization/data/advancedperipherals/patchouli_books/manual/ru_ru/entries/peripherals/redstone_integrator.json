@@ -1,0 +1,30 @@
+{
+  "name": "Интегратор красного камня",
+  "icon": "advancedperipherals:redstone_integrator",
+  "category": "advancedperipherals:peripherals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Устройство работает с сигналами красного камня через тот же API, что и компьютер.$(p)Интегратор пригодится, когда для вывода сигнала нужно больше сторон, чем есть у компьютера.$(p)Подробности есть на $(9)$(l:https://docs.intelligence-modding.de/peripherals/redstone_integrator/)официальной вики$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:redstone_integrator"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "0": "computercraft:computer_advanced",
+          "P": "advancedperipherals:redstone_integrator"
+        },
+        "pattern": [
+          [
+            "0P"
+          ]
+        ]
+      },
+      "text": "Подключите интегратор красного камня к компьютеру."
+    }
+  ]
+}

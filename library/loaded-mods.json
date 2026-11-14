@@ -1269,7 +1269,7 @@
   "schemaVersion": 1,
   "sourceJars": {
     "mods/AIOTBotania-1.19.2-3.0.1.jar": "76f9c53831dce09957c3ac9f6e03865794dbbc3f7c987084cd6afd7c2adee150",
-    "mods/AdvancedPeripherals-1.19.2-0.7.29r.jar": "af03e1f85e1d64c7020a1527fd4fd89f8e9faf6bed15e029d6bb61530b7d5fd4",
+    "mods/AdvancedPeripherals-1.19.2-0.7.29r.jar": "c97a17f1ed982c0440c1786f3e137c8037cb3bb2385e51a9f38fe097afa17343",
     "mods/AttributeFix-Forge-1.19.2-17.2.7.jar": "c470d18626128c6c0dc86bdc9c8ccfd8e2e53794e7e6a3399032d35c80502639",
     "mods/AutoRegLib-1.8.2-55.jar": "a6e61dd9ba08d375146cf850d3c8c30f6478c9c898fda7245a507732368fd377",
     "mods/BetterModsButton-v4.2.2-1.19.2-Forge.jar": "56ca286fb3c0b38c1a3dd004f2ae74ceef53b2e1f0cc11f8ac5008a5e72eab23",
@@ -1423,7 +1423,7 @@
     "mods/sophisticatedcore-1.19.2-0.5.81.377.jar": "3ca184b806305440554528d3bb2381560ea1a2a0171beff3a3034fb41ad0b31c",
     "mods/soundphysics-forge-1.19.2-1.0.18.jar": "d40273920e72ec9d61de09dfb7edbf03039cca51d72078335d630a0b5c95cd22",
     "mods/squatgrow-3.0.0-build.33+mc1.19.2.jar": "4c24cd5c7898c9e836652981f92327037782b4a0638837cbebfd34aabe584803",
-    "mods/squirtgun-1.19.2-1.1.1.jar": "9b5ecde9e7595f79380d056484429ab3b1e9602588194650dcad85e747e08e1d",
+    "mods/squirtgun-1.19.2-1.1.1.jar": "cd30250e75c5f429a51d938707f70c1a0570c42b4b445d835df2680a02caa8cb",
     "mods/stackrefill-1.19.2-4.0.jar": "a661ffaf1e109acfe4fa815ba82843b36ad2a6675d41a191ae2e852d70b29c59",
     "mods/supermartijn642configlib-1.1.7-forge-mc1.19.jar": "13b243c5c97b1cd3db1504aa520da44fc4f5569d823b2b69c943a9f983f06727",
     "mods/supermartijn642corelib-1.1.11-forge-mc1.19.2.jar": "c0f6d353f211514c6489cfb32e0f274cde13216d2fa23ec1736eb7de20582d66",

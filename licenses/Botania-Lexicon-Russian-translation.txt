@@ -1,0 +1,22 @@
+Botania lexicon by Vazkii and the Botania contributors.
+
+This independent Russian-language supplement for UniversIO adapts the text of
+Lexica Botania from Botania 1.19.2-440. It adds a client language file and leaves
+the author's game mod and book definitions unchanged.
+
+Original release, code and assets:
+https://www.curseforge.com/minecraft/mc-mods/botania/files/4557912
+https://github.com/Botania-Minecraft/Botania/tree/268244299b69973d5fb07e0e69b31591cf682494
+
+Editable source of this translation:
+https://github.com/MarkZamore/UniversIO/blob/main/kubejs/assets/botania/lang/ru_ru.json
+
+This notice licenses the translation component at
+kubejs/assets/botania/lang/ru_ru.json under the Botania License. Its source may
+be used, redistributed and modified under that license. Anyone distributing a
+modified version of this component must keep corresponding source visible,
+allow redistribution and modification, retain attribution and include a like
+requirement for further adaptations.
+
+Original license terms for Botania and adapted components:
+https://github.com/Botania-Minecraft/Botania/blob/268244299b69973d5fb07e0e69b31591cf682494/LICENSE.txt

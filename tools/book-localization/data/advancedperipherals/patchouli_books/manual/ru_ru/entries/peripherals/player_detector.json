@@ -1,0 +1,30 @@
+{
+  "name": "Детектор игрока",
+  "icon": "advancedperipherals:player_detector",
+  "category": "advancedperipherals:peripherals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Детектор распознаёт игроков в пределах заданного радиуса. Он также определяет, кто нажал на него.$(p)Подробности есть на $(9)$(l:https://docs.intelligence-modding.de/peripherals/player_detector/)официальной вики$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:player_detector"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "0": "computercraft:computer_advanced",
+          "P": "advancedperipherals:player_detector"
+        },
+        "pattern": [
+          [
+            "0P"
+          ]
+        ]
+      },
+      "text": "Подключите детектор игрока к компьютеру."
+    }
+  ]
+}

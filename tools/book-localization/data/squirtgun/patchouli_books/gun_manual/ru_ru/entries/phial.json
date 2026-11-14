@@ -1,0 +1,17 @@
+{
+  "name": "Флакон",
+  "icon": "squirtgun:phial",
+  "category": "squirtgun:phials",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Сделайте пустой флакон на верстаке и наполните его в $(l)установке доктора Кларка."
+    },
+    {
+      "type": "crafting",
+      "recipe": "squirtgun:phial",
+      "text": "Флаконы хранят жидкость, которой стреляет пистолет."
+    }
+  ]
+}

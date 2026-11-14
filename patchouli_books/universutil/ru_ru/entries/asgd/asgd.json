@@ -1,0 +1,60 @@
+{
+    "name": "Установка ASGD",
+    "icon": "universutil:gravity_block",
+    "category": "patchouli:asgd",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Установка генерации искусственной сверхновой (ASGD) автоматически производит космическую пыль.$(br)$(br)$(l)Для работы нужен сигнал красного камня и бочка или другое хранилище над блоком гравитации."
+        },
+        {
+            "type": "patchouli:multiblock",
+            "multiblock": {
+                "pattern": [
+                    [
+                        "R   R",
+                        "     ",
+                        "     ",
+                        "     ",
+                        "R   R"
+                    ],
+                    [
+                        "G   G",
+                        "     ",
+                        "     ",
+                        "     ",
+                        "G   G"
+                    ],
+                    [
+                        "G   G",
+                        "     ",
+                        "     ",
+                        "     ",
+                        "G   G"
+                    ],
+                    [
+                        "G   G",
+                        "     ",
+                        "  0  ",
+                        "     ",
+                        "G   G"
+                    ],
+                    [
+                        "GGGGG",
+                        "GWWWG",
+                        "GWWWG",
+                        "GWWWG",
+                        "GGGGG"
+                    ]
+                ],
+                "mapping": {
+                    "G": "universutil:everythingness",
+                    "W": "universutil:cosmic_dust_block",
+                    "0": "universutil:gravity_block",
+                    "R": "universutil:star_block"
+                },
+                "symmetrical": true
+            }
+        }
+    ]
+}

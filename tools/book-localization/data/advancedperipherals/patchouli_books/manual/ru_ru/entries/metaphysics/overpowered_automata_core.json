@@ -1,0 +1,25 @@
+{
+  "name": "Усиленное ядро автомата",
+  "icon": "advancedperipherals:overpowered_weak_automata_core",
+  "category": "advancedperipherals:metaphysics",
+  "advancement": "advancedperipherals:weak_automata_core",
+  "pages": [
+    {
+      "type": "spotlight",
+      "title": "Усиленное слабое ядро",
+      "item": "advancedperipherals:overpowered_weak_automata_core",
+      "text": "Вы впервые пытаетесь обойти законы метафизики. Получилось не совсем так, как вы рассчитывали.$(p)Если соединить любое ядро автомата со звездой Незера, кое-что всё же выходит…"
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:overpowered_weak_automata_core",
+      "recipe2": "advancedperipherals:overpowered_end_automata_core"
+    },
+    {
+      "type": "link",
+      "text": "Усиленные ядра не тратят прочность предметов при использовании.$(p)За это приходится платить: если попытаться выполнить действие без достаточного запаса топлива, улучшение тут же сломается.",
+      "url": "https://docs.intelligence-modding.de/metaphysics/overpowered_automata/",
+      "link_text": "Документация API"
+    }
+  ]
+}
