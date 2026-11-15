@@ -1,0 +1,52 @@
+name: Publish UniversIO controls
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - launcher/controls-preset.txt
+      - tools/keybinds/**
+
+concurrency:
+  group: universio-pack-latest
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Validate preset and stage release assets
+        run: |
+          python -B tools/keybinds/check_preset.py
+          stamp="$(git show -s --format=%ct HEAD)"
+          python -B tools/keybinds/stage_release.py dist "$GITHUB_SHA" "$(date -u -d "@$stamp" +%Y-%m-%dT%H:%M:%SZ)"
+      - name: Verify release base and publish assets
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --location --retry 3 \
+            "https://github.com/$GITHUB_REPOSITORY/releases/download/pack-latest/pack-manifest.json" -o live-manifest.json
+          printf '%s  live-manifest.json\n' "$(cat dist/previous.sha256)" | sha256sum --check
+          for asset in dist/library-*.zip dist/r-*-controls-preset.zip; do
+            name="${asset##*/}"
+            digest="$(sha256sum "$asset" | cut -d ' ' -f 1)"
+            existing="$(gh release view pack-latest --json assets --jq ".assets[] | select(.name == \"$name\") | .digest")"
+            if [ -z "$existing" ]; then
+              gh release upload pack-latest "$asset"
+            else
+              test "$existing" = "sha256:$digest"
+            fi
+          done
+          git push --force-with-lease=refs/tags/pack-latest:"$(git ls-remote origin refs/tags/pack-latest | cut -f 1)" \
+            origin "$GITHUB_SHA:refs/tags/pack-latest"
+          gh release edit pack-latest --target "$GITHUB_SHA"
+          gh release upload pack-latest dist/pack-manifest.json --clobber

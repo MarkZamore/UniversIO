@@ -13,3 +13,5 @@
 /config/ftbquests/quests/chapters/*.snbt whitespace=cr-at-eol
 /patchouli_books/universutil/book.json whitespace=cr-at-eol
 /kubejs/client_scripts/lanmc_menu_player_skin.js text eol=lf
+/launcher/controls-preset.txt text eol=lf
+/tools/keybinds/*.txt text eol=lf
