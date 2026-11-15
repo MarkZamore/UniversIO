@@ -49,6 +49,11 @@
         "path": "kubejs/client_scripts/lanmc_menu_player_skin.js",
         "sizeBytes": 2155,
         "sha256": "1e1b5b85a13ee4a6c667ec501613f378177ab098d0a9502d6b6e6afb9a520e50"
+      },
+      {
+        "path": "kubejs/client_scripts/lanmc_pause_reports_layout.js",
+        "sizeBytes": 2363,
+        "sha256": "d1b3d81b16c3600680a8d58e08e44738ca6ce3de6f05031ed8fb577b0541c3c2"
       }
     ]
   },

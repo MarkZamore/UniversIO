@@ -1,4 +1,4 @@
-name: Publish UniversIO controls
+name: Publish UniversIO updates
 
 on:
   workflow_dispatch:
@@ -7,6 +7,7 @@ on:
     paths:
       - launcher/controls-preset.txt
       - tools/keybinds/**
+      - kubejs/client_scripts/lanmc_pause_reports_layout.js
 
 concurrency:
   group: universio-pack-latest
@@ -36,7 +37,7 @@ jobs:
           curl --fail --silent --show-error --location --retry 3 \
             "https://github.com/$GITHUB_REPOSITORY/releases/download/pack-latest/pack-manifest.json" -o live-manifest.json
           printf '%s  live-manifest.json\n' "$(cat dist/previous.sha256)" | sha256sum --check
-          for asset in dist/library-*.zip dist/r-*-controls-preset.zip; do
+          for asset in dist/*.zip; do
             name="${asset##*/}"
             digest="$(sha256sum "$asset" | cut -d ' ' -f 1)"
             existing="$(gh release view pack-latest --json assets --jq ".assets[] | select(.name == \"$name\") | .digest")"
