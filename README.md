@@ -180,3 +180,11 @@ java -cp "$classPath" tools/UniversioPauseProbe.java kubejs/client_scripts/lanmc
 версию. После инициализации главного меню скрипт UniversIO отключает только
 подписчик, который выводит это сообщение. Рецепт закрепляет файл 4153724.
 Замена этого JAR в авторском архиве требует сверки обработчика перед выпуском.
+
+`tools/UniversioInventoryHudProbe.java` проверяет удаление экземпляра
+подписчика на EventBus 6.0.3 и Rhino из сборки. К classpath проверки меню
+паузы добавьте `invhud.forge.1.19-3.4.7.jar` и выполните:
+
+```powershell
+java -cp "$classPath" tools/UniversioInventoryHudProbe.java kubejs/client_scripts/lanmc_inventoryhud_update_notice.js
+```
