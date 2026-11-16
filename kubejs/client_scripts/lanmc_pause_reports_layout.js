@@ -9,14 +9,25 @@
   const Priority = Java.loadClass('net.minecraftforge.eventbus.api.EventPriority')
   const RenderPre = Java.loadClass('net.minecraftforge.client.event.ScreenEvent$Render$Pre')
 
-  function overlaps(x, y, width, height, widget) {
-    return x < widget.x + widget.getWidth() && x + width > widget.x &&
-      y < widget.y + widget.getHeight() && y + height > widget.y
+  // On this Forge version mods can add x()/y() alongside the mapped fields.
+  // Rhino 284 then exposes overloaded field/method objects instead of numbers.
+  const widgetClass = Widget.__javaObject__
+  const xField = widgetClass.getField('f_93620_')
+  const yField = widgetClass.getField('f_93621_')
+  const visibleField = widgetClass.getField('f_93624_')
+
+  function bounds(widget) {
+    return { x: xField.getInt(widget), y: yField.getInt(widget),
+      width: widget.getWidth(), height: widget.getHeight() }
+  }
+
+  function overlaps(a, b) {
+    return a.x < b.x + b.width && a.x + a.width > b.x &&
+      a.y < b.y + b.height && a.y + a.height > b.y
   }
 
   // FancyMenu's render-pre listener can reapply layout changes on a resize.
-  Forge.EVENT_BUS.addListener(Priority.LOWEST, false, RenderPre, event => {
-    const screen = event.getScreen()
+  function alignReports(screen) {
     if (!(screen instanceof PauseScreen)) return
     const widgets = []
     let reports = null
@@ -25,7 +36,7 @@
     const children = screen.children().iterator()
     while (children.hasNext()) {
       let widget = children.next()
-      if (!(widget instanceof Widget) || !widget.visible) continue
+      if (!(widget instanceof Widget) || !visibleField.getBoolean(widget)) continue
       widgets.push(widget)
       if (!(widget instanceof Button)) continue
       let contents = widget.getMessage().getContents()
@@ -36,13 +47,26 @@
         case 'gui.stats': stats = widget; break
       }
     }
-    if (reports == null || options == null || stats == null || stats.x <= options.x || stats.y >= options.y) return
-    const width = reports.getWidth()
-    const height = reports.getHeight()
-    const others = widgets.filter(widget => widget !== reports)
-    if (!others.some(widget => overlaps(reports.x, reports.y, width, height, widget))) return
-    if (others.some(widget => overlaps(stats.x, options.y, width, height, widget))) return
-    reports.x = stats.x
-    reports.y = options.y
+    if (reports == null || options == null || stats == null) return
+    const original = bounds(reports)
+    const target = { x: xField.getInt(stats), y: yField.getInt(options),
+      width: original.width, height: original.height }
+    if (target.x <= xField.getInt(options) || yField.getInt(stats) >= target.y) return
+    const others = widgets.filter(widget => widget !== reports).map(bounds)
+    if (!others.some(widget => overlaps(original, widget))) return
+    if (others.some(widget => overlaps(target, widget))) return
+    xField.setInt(reports, target.x)
+    yField.setInt(reports, target.y)
+  }
+
+  let disabled = false
+  Forge.EVENT_BUS.addListener(Priority.LOWEST, false, RenderPre, event => {
+    if (disabled) return
+    try {
+      alignReports(event.getScreen())
+    } catch (error) {
+      disabled = true
+      console.warn('UniversIO pause layout disabled: ' + error)
+    }
   })
 })()
