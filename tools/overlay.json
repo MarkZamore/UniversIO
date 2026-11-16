@@ -46,6 +46,10 @@
       {
         "projectId": 226410,
         "fileId": 3955047
+      },
+      {
+        "projectId": 357540,
+        "fileId": 4153724
       }
     ],
     "files": [
@@ -63,6 +67,11 @@
         "path": "kubejs/client_scripts/lanmc_projecte_update_notice.js",
         "sizeBytes": 385,
         "sha256": "c290b1dde1f65a5261ddc3693290e799f760dbc4f8d7198acf9a445be19e0c2d"
+      },
+      {
+        "path": "kubejs/client_scripts/lanmc_inventoryhud_update_notice.js",
+        "sizeBytes": 1441,
+        "sha256": "38201c48ae280ac109f8bbc33a3b5ed9925b0cc711b23b23bc14c16107ac8921"
       }
     ]
   },

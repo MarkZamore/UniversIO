@@ -5,6 +5,8 @@ import json
 from pathlib import Path
 import sys
 
+from multiplayer_warning import load_option
+
 
 PACK = Path(__file__).resolve().parents[1]
 MENU_PATH = "config/fancymenu/customization/main_menu.txt"
@@ -53,6 +55,8 @@ def main():
         verify_title_menu(candidate)
         verify_pause_menu(current)
         verify_pause_menu(candidate)
+        load_option(current)
+        load_option(candidate)
         recipe = release_overlay.review_update(PACK, current, candidate)
     except (OSError, ValueError, KeyError, TypeError) as error:
         parser.exit(1, f"{parser.prog}: {error}\n")

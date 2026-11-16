@@ -14,6 +14,8 @@
 /patchouli_books/universutil/book.json whitespace=cr-at-eol
 /kubejs/client_scripts/lanmc_menu_player_skin.js text eol=lf
 /launcher/controls-preset.txt text eol=lf
+/launcher/options-default.txt text eol=lf
 /tools/keybinds/*.txt text eol=lf
 /kubejs/client_scripts/lanmc_pause_reports_layout.js text eol=lf
 /kubejs/client_scripts/lanmc_projecte_update_notice.js text eol=lf
+/kubejs/client_scripts/lanmc_inventoryhud_update_notice.js text eol=lf

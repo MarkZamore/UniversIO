@@ -6,9 +6,13 @@ on:
     branches: [main]
     paths:
       - launcher/controls-preset.txt
+      - launcher/options-default.txt
+      - tools/launcher-options-pin.json
+      - tools/multiplayer_warning.py
       - tools/keybinds/**
       - kubejs/client_scripts/lanmc_pause_reports_layout.js
       - kubejs/client_scripts/lanmc_projecte_update_notice.js
+      - kubejs/client_scripts/lanmc_inventoryhud_update_notice.js
       - tools/overlay.json
       - launcher/pack-owned.txt
 

@@ -17,6 +17,7 @@ kubejs/assets/universio/lang/en_us.json
 kubejs/assets/universio/lang/ru_ru.json
 kubejs/assets/universio_quests/lang/en_us.json
 kubejs/assets/universio_quests/lang/ru_ru.json
+kubejs/client_scripts/lanmc_inventoryhud_update_notice.js
 kubejs/client_scripts/lanmc_menu_player_skin.js
 kubejs/client_scripts/lanmc_pause_reports_layout.js
 kubejs/client_scripts/lanmc_projecte_update_notice.js

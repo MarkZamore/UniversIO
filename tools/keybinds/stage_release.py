@@ -1,4 +1,4 @@
-"""Stage controls and client script updates from the published UniversIO manifest."""
+"""Stage controls, options and client scripts from the published UniversIO manifest."""
 
 import hashlib
 import io
@@ -12,9 +12,16 @@ import zipfile
 from check_preset import build
 
 PACK = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(PACK / "tools"))
+from multiplayer_warning import OPTION_PATH, load_option
+
+
 PAUSE_SCRIPT = "kubejs/client_scripts/lanmc_pause_reports_layout.js"
-PROJECTE_SCRIPT = "kubejs/client_scripts/lanmc_projecte_update_notice.js"
-SCRIPT_ASSETS = {PAUSE_SCRIPT: "pause-reports", PROJECTE_SCRIPT: "projecte-notice"}
+SCRIPT_ASSETS = {
+    PAUSE_SCRIPT: "pause-reports",
+    "kubejs/client_scripts/lanmc_projecte_update_notice.js": "projecte-notice",
+    "kubejs/client_scripts/lanmc_inventoryhud_update_notice.js": "inventoryhud-notice",
+}
 PAUSE_LAYOUT = "config/fancymenu/customization/pause_screen.txt"
 OWNERSHIP = "launcher/pack-owned.txt"
 
@@ -48,6 +55,23 @@ def archive(files):
         for name, data in sorted(files.items()):
             output.writestr(zipfile.ZipInfo(name), data, compress_type=zipfile.ZIP_DEFLATED)
     return buffer.getvalue()
+
+
+def stage_option(manifest):
+    author = json.loads((PACK / "tools/upstream-client-lock.json").read_bytes())
+    file_pin, source = load_option(author)
+    installed = [row for row in manifest["files"] if row["path"] == OPTION_PATH]
+    previous = [row for row in manifest["assets"] if OPTION_PATH in row["covers"]]
+    if not installed and not previous:
+        data = archive({OPTION_PATH: source})
+        asset_pin = pin(data)
+        name = f"r-{asset_pin['sha256'][:12]}-launcher-options.zip"
+        manifest["files"].append(file_pin)
+        manifest["assets"].append({"name": name, "kind": "zipRoot", **asset_pin, "covers": [OPTION_PATH]})
+        return {name: data}
+    if installed != [file_pin] or len(previous) != 1 or previous[0]["kind"] != "zipRoot":
+        raise ValueError("Unexpected published launcher options file or archive")
+    return {}
 
 
 def stage_client_scripts(manifest):
@@ -153,6 +177,7 @@ def main(out, revision, timestamp):
     old["files"].append({"path": PRESET, **pin(preset)})
     old.update(revision=revision, generatedAtUtc=timestamp, library={"revision": revision, "name": library_name, **archive_pin})
     extra_assets = stage_client_scripts(old)
+    extra_assets.update(stage_option(old))
     out.mkdir(parents=True)
     for name, data in ((library_name, library), (controls_name, controls), ("pack-manifest.json", encode(old))):
         (out / name).write_bytes(data)

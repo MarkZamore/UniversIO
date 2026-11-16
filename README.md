@@ -11,6 +11,7 @@
 
 ```powershell
 python -B tools/PackData/CurseForge/release_overlay.py stage --pack-source LocalSources/UniversIO --output $stage
+python -B LocalSources/UniversIO/tools/multiplayer_warning.py --launcher-source . --stage $stage
 ```
 
 `tools/overlay.json` сохраняет политику открытия мира через Steam. Для нового
@@ -25,8 +26,12 @@ python -B LocalSources/UniversIO/tools/review_author_update.py --launcher-source
 общую проверку рецепта и печатает предложенный `overlay.json`. Результат
 не записывается в исходники автоматически. При изменении защищённого входа
 пересмотрите рецепт и закрепите новые точные байты. После нативной проверки
-сохраните полный `tools/upstream-lock.json` и выполните `release_overlay.py verify`
-по готовому манифесту.
+сохраните полный `tools/upstream-lock.json`. После упаковки выполните общую
+проверку и проверку настройки сборки одной командой:
+
+```powershell
+python -B LocalSources/UniversIO/tools/multiplayer_warning.py --launcher-source . --stage $stage --verify-manifest $manifest
+```
 
 `tools/curseforge-fallbacks.json` закрепляет три обязательные зависимости с пустыми метаданными CurseForge. Project ID и file ID взяты из авторского `manifest.json`, имена проектов сверены по `modlist.html` того же экспорта. Полные файлы получены с официального CDN по точным file ID.
 
@@ -39,6 +44,19 @@ python -B LocalSources/UniversIO/tools/review_author_update.py --launcher-source
 Условия авторского источника — All Rights Reserved.
 
 Пользователь подтвердил наличие разрешения на перезалив. Публикация следует после проверки полного состава и нативной приёмки.
+
+## Вход в сетевую игру
+
+UniversIO поставляет `launcher/options-default.txt` с одним параметром
+`!skipMultiplayerWarning:true`. Он отключает экран предупреждения Minecraft
+1.19.2 перед списком серверов. Лаунчер применяет это значение и к новым,
+и к существующим профилям, сохраняя остальные настройки игрока.
+Настройка управляет экраном и сохраняет проверки аккаунта и доступа к сети.
+
+`tools/launcher-options-pin.json` закрепляет файл. Обновление авторской сборки
+проверяет отсутствие одноимённого авторского файла. Полная подготовка
+добавляет настройку отдельным шагом из раздела выше, а обычная публикация
+включает её в `pack-latest` через `stage_release.py`.
 
 ## Языки игровых книг
 
@@ -155,3 +173,10 @@ java -cp "$classPath" tools/UniversioPauseProbe.java kubejs/client_scripts/lanmc
 `review_author_update.py` сохраняет скрипт при обновлении авторского архива.
 Если автор заменит ProjectE, проверка потребует сверить обработчик в новом JAR
 и обновить запись зависимости перед публикацией.
+
+## Уведомление об обновлении Inventory HUD+
+
+При первом входе в мир Inventory HUD+ 3.4.7 отправляет в чат ссылку на новую
+версию. После инициализации главного меню скрипт UniversIO отключает только
+подписчик, который выводит это сообщение. Рецепт закрепляет файл 4153724.
+Замена этого JAR в авторском архиве требует сверки обработчика перед выпуском.
