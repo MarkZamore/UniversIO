@@ -1,4 +1,4 @@
-"""Stage a controls and pause-menu update from the published UniversIO manifest."""
+"""Stage controls and client script updates from the published UniversIO manifest."""
 
 import hashlib
 import io
@@ -13,6 +13,8 @@ from check_preset import build
 
 PACK = Path(__file__).resolve().parents[2]
 PAUSE_SCRIPT = "kubejs/client_scripts/lanmc_pause_reports_layout.js"
+PROJECTE_SCRIPT = "kubejs/client_scripts/lanmc_projecte_update_notice.js"
+SCRIPT_ASSETS = {PAUSE_SCRIPT: "pause-reports", PROJECTE_SCRIPT: "projecte-notice"}
 PAUSE_LAYOUT = "config/fancymenu/customization/pause_screen.txt"
 OWNERSHIP = "launcher/pack-owned.txt"
 
@@ -48,53 +50,62 @@ def archive(files):
     return buffer.getvalue()
 
 
-def stage_pause_script(manifest):
+def stage_client_scripts(manifest):
     files = {row["path"]: row for row in manifest["files"]}
     author = json.loads((PACK / "tools/upstream-client-lock.json").read_bytes())
     layout, = [row for row in author["overrides"] if row["path"] == PAUSE_LAYOUT]
     if any(files[PAUSE_LAYOUT][key] != layout[key] for key in ("sizeBytes", "sha256")):
         raise ValueError("Review the new FancyMenu pause layout")
     recipe = json.loads((PACK / "tools/overlay.json").read_bytes())
-    script_pin, = [row for row in recipe["clientScripts"]["files"] if row["path"] == PAUSE_SCRIPT]
-    script = (PACK / PAUSE_SCRIPT).read_bytes()
-    if {"path": PAUSE_SCRIPT, **pin(script)} != script_pin:
-        raise ValueError("Pause script differs from its recipe")
+    script_pins = {row["path"]: row for row in recipe["clientScripts"]["files"]}
     owners = (PACK / OWNERSHIP).read_bytes()
-    if owners.splitlines().count(PAUSE_SCRIPT.encode()) != 1:
-        raise ValueError("Expected one pause script ownership entry")
-    if files.get(PAUSE_SCRIPT) == script_pin and files[OWNERSHIP] == {"path": OWNERSHIP, **pin(owners)}:
-        return {}
-
-    owner_asset, = [row for row in manifest["assets"] if OWNERSHIP in row["covers"]]
-    data = get(owner_asset["name"], 4 * 1024 * 1024)
-    if any(pin(data)[key] != owner_asset[key] for key in ("sizeBytes", "sha256")):
-        raise ValueError("Unexpected published ownership archive")
-    with zipfile.ZipFile(io.BytesIO(data)) as source:
-        if sorted(source.namelist()) != sorted(owner_asset["covers"]):
-            raise ValueError("Unexpected ownership archive members")
-        owner_files = {name: source.read(name) for name in source.namelist()}
-    if [line for line in owners.splitlines() if line != PAUSE_SCRIPT.encode()] != [
-        line for line in owner_files[OWNERSHIP].splitlines() if line != PAUSE_SCRIPT.encode()
-    ]:
-        raise ValueError("Ownership must retain all unrelated paths")
-    for name, data in owner_files.items():
-        if files[name] != {"path": name, **pin(data)}:
-            raise ValueError(f"Published archive member differs: {name}")
-
-    prior_script_assets = [row for row in manifest["assets"] if PAUSE_SCRIPT in row["covers"]]
-    if any(row["covers"] != [PAUSE_SCRIPT] for row in prior_script_assets):
-        raise ValueError("Expected an independent pause script archive")
-    manifest["assets"] = [row for row in manifest["assets"] if row != owner_asset and row not in prior_script_assets]
-    manifest["files"] = [row for row in manifest["files"] if row["path"] not in {OWNERSHIP, PAUSE_SCRIPT}]
-    manifest["files"].extend(({"path": OWNERSHIP, **pin(owners)}, script_pin))
-    owner_files[OWNERSHIP] = owners
     outputs = {}
-    for label, members in (("launcher", owner_files), ("pause-reports", {PAUSE_SCRIPT: script})):
+
+    def add_asset(label, members):
         data = archive(members)
         asset_pin = pin(data)
         name = f"r-{asset_pin['sha256'][:12]}-{label}.zip"
         manifest["assets"].append({"name": name, "kind": "zipRoot", **asset_pin, "covers": sorted(members)})
         outputs[name] = data
+
+    for path, label in SCRIPT_ASSETS.items():
+        script = (PACK / path).read_bytes()
+        if {"path": path, **pin(script)} != script_pins[path]:
+            raise ValueError(f"Script differs from its recipe: {path}")
+        if owners.splitlines().count(path.encode()) != 1:
+            raise ValueError(f"Expected one ownership entry: {path}")
+        if files.get(path) == script_pins[path]:
+            continue
+        for previous in [row for row in manifest["assets"] if path in row["covers"]]:
+            if previous["covers"] != [path]:
+                raise ValueError(f"Expected an independent script archive: {path}")
+            manifest["assets"].remove(previous)
+        files[path] = script_pins[path]
+        add_asset(label, {path: script})
+
+    ownership_pin = {"path": OWNERSHIP, **pin(owners)}
+    if files[OWNERSHIP] != ownership_pin:
+        owner_asset, = [row for row in manifest["assets"] if OWNERSHIP in row["covers"]]
+        data = get(owner_asset["name"], 4 * 1024 * 1024)
+        if any(pin(data)[key] != owner_asset[key] for key in ("sizeBytes", "sha256")):
+            raise ValueError("Unexpected published ownership archive")
+        with zipfile.ZipFile(io.BytesIO(data)) as source:
+            if sorted(source.namelist()) != sorted(owner_asset["covers"]):
+                raise ValueError("Unexpected ownership archive members")
+            owner_files = {name: source.read(name) for name in source.namelist()}
+        for name, data in owner_files.items():
+            if files[name] != {"path": name, **pin(data)}:
+                raise ValueError(f"Published archive member differs: {name}")
+        scripts = {path.encode() for path in SCRIPT_ASSETS}
+        if [line for line in owners.splitlines() if line not in scripts] != [
+            line for line in owner_files[OWNERSHIP].splitlines() if line not in scripts
+        ]:
+            raise ValueError("Ownership must retain all unrelated paths")
+        files[OWNERSHIP] = ownership_pin
+        owner_files[OWNERSHIP] = owners
+        manifest["assets"].remove(owner_asset)
+        add_asset("launcher", owner_files)
+    manifest["files"] = list(files.values())
     return outputs
 
 
@@ -141,7 +152,7 @@ def main(out, revision, timestamp):
     old["files"] = [row for row in old["files"] if row not in old_files]
     old["files"].append({"path": PRESET, **pin(preset)})
     old.update(revision=revision, generatedAtUtc=timestamp, library={"revision": revision, "name": library_name, **archive_pin})
-    extra_assets = stage_pause_script(old)
+    extra_assets = stage_client_scripts(old)
     out.mkdir(parents=True)
     for name, data in ((library_name, library), (controls_name, controls), ("pack-manifest.json", encode(old))):
         (out / name).write_bytes(data)

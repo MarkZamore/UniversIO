@@ -8,6 +8,9 @@ on:
       - launcher/controls-preset.txt
       - tools/keybinds/**
       - kubejs/client_scripts/lanmc_pause_reports_layout.js
+      - kubejs/client_scripts/lanmc_projecte_update_notice.js
+      - tools/overlay.json
+      - launcher/pack-owned.txt
 
 concurrency:
   group: universio-pack-latest

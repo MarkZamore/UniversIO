@@ -16,3 +16,4 @@
 /launcher/controls-preset.txt text eol=lf
 /tools/keybinds/*.txt text eol=lf
 /kubejs/client_scripts/lanmc_pause_reports_layout.js text eol=lf
+/kubejs/client_scripts/lanmc_projecte_update_notice.js text eol=lf

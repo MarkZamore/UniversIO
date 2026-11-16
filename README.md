@@ -144,3 +144,14 @@ FancyMenu распознаёт кнопку «Открыть для сети» �
 ```powershell
 java -cp "$classPath" tools/UniversioPauseProbe.java kubejs/client_scripts/lanmc_pause_reports_layout.js
 ```
+
+## Уведомление об обновлении ProjectE
+
+При входе в мир ProjectE PE1.0.1B выводит в чат версию и ссылку на загрузку.
+Клиентский скрипт UniversIO отключает подписчик ProjectE, который выводит эти
+сообщения. Проверка версий Forge остаётся включённой.
+
+`tools/overlay.json` закрепляет скрипт и файл ProjectE 3955047.
+`review_author_update.py` сохраняет скрипт при обновлении авторского архива.
+Если автор заменит ProjectE, проверка потребует сверить обработчик в новом JAR
+и обновить запись зависимости перед публикацией.
