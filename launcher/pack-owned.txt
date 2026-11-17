@@ -6,6 +6,7 @@ config/ftbquests/quests/chapters/6lact_ivr_digital_age.snbt
 config/ftbquests/quests/chapters/act_new_universe.snbt
 config/ftbquests/quests/chapters/blpsi_0_act_side_actr_place_holder.snbt
 config/ftbquests/quests/chapters/informatica.snbt
+config/lanminecraft/experimental-world-confirmation.jar
 config/log4j2.xml
 kubejs/assets/advancedperipherals/lang/en_us.json
 kubejs/assets/advancedperipherals/lang/ru_ru.json
